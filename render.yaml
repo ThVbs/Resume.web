@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: tiago-joao-portfolio
+    runtime: static
+    buildCommand: mkdir -p dist && npx --yes html-minifier-terser@7.2.0 --collapse-whitespace --remove-comments --minify-css true --minify-js true -o dist/index.html index.html && cp -r assets dist/
+    staticPublishPath: ./dist
+    headers:
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin

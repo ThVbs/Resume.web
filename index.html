@@ -1,12 +1,25 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Tiago João — Full Stack Developer & Tech Lead</title>
 <meta name="description" content="Tiago João is a full stack developer and tech lead based in Florianópolis, Brazil. Co-founder of Altys, 10+ projects delivered from discovery to launch. Open to remote work, EU work authorized.">
 <meta property="og:title" content="Tiago João — Full Stack Developer & Tech Lead">
 <meta property="og:description" content="Full stack developer & tech lead. I turn client problems into software that ships.">
+<link rel="icon" type="image/gif" href="assets/favicon/tj-spin.gif">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+<meta name="theme-color" content="#0B0B0C">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/favicon/tj-icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Caveat:wght@600;700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0}
+img{max-width:100%}
 /* Layout: 12-column asymmetric grid, screen-filling fitted headlines, small mono section indices, one neon accent */
 :root{
   --ink:#0B0B0C;
@@ -415,7 +428,8 @@ main,.foot{position:relative;z-index:1}
 .c-ring.big{width:72px;height:72px;margin:-36px 0 0 -36px;border-color:var(--acid);background:rgba(200,255,0,.08)}
 .c-ring.hide,.c-dot.hide{opacity:0}
 </style>
-
+</head>
+<body>
 <div id="bgHost" aria-hidden="true"></div>
 <div class="vignette" aria-hidden="true"></div>
 <div class="grain" aria-hidden="true"></div>
@@ -1538,6 +1552,16 @@ main,.foot{position:relative;z-index:1}
     })();
   }
 })();
-</script>
 
-</body></html>
+  /* ---------- Spinning TJ favicon (all browsers) ---------- */
+  (function(){
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var l = document.querySelector('link[rel="icon"]'), c = document.createElement("canvas"), x = c.getContext("2d"), s = new Image(), i = 0;
+    c.width = c.height = 64;
+    s.onload = function(){ setInterval(function(){ x.clearRect(0,0,64,64); x.drawImage(s, 0, i * 64, 64, 64, 0, 0, 64, 64); l.type = "image/png"; l.href = c.toDataURL(); i = (i + 1) % 48; }, 90); };
+    s.src = "assets/favicon/tj-spin-frames.png";
+  })();
+
+</script>
+</body>
+</html>

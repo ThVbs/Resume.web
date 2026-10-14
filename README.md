@@ -289,4 +289,14 @@ Para trocar uma foto, gere as três versões com o mesmo nome. As fotos do iPhon
 
 ---
 
+## Versões salvas
+
+| Versão | O que tem |
+|---|---|
+| `BETAt1.html` | Fundo de grade neon em perspectiva (terreno) |
+| `BETA2.html` | Seletor com os fundos Fluido, Partículas, Rede e BETAt1 |
+| `tiago-joao-portfolio.html` | **Atual:** fundo Foco, selo TJ, fotos com galeria |
+
+---
+
 <sub>© 2026 Tiago João. Todos os direitos reservados.</sub>
