@@ -1,0 +1,1543 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Tiago João — Full Stack Developer & Tech Lead</title>
+<meta name="description" content="Tiago João is a full stack developer and tech lead based in Florianópolis, Brazil. Co-founder of Altys, 10+ projects delivered from discovery to launch. Open to remote work, EU work authorized.">
+<meta property="og:title" content="Tiago João — Full Stack Developer & Tech Lead">
+<meta property="og:description" content="Full stack developer & tech lead. I turn client problems into software that ships.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Caveat:wght@600;700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: 12-column asymmetric grid, screen-filling fitted headlines, small mono section indices, one neon accent */
+:root{
+  --ink:#0B0B0C;
+  --surface:#141513;
+  --line:#272923;
+  --paper:#F1F0EA;
+  --muted:#8F9186;
+  --acid:#C8FF00;
+  --display:'Big Shoulders Display','Arial Narrow',Impact,sans-serif;
+  --body:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  --hand:'Caveat','Bradley Hand','Segoe Print',cursive;
+  --gutter:clamp(16px,4vw,56px);
+  --ease:cubic-bezier(.2,.8,.2,1);
+  color-scheme:dark;
+}
+html{background:var(--ink)}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--ink);color:var(--paper);font-family:var(--body);font-size:16px;line-height:1.55;padding-inline:var(--gutter);overflow-x:clip;-webkit-font-smoothing:antialiased}
+::selection{background:var(--acid);color:var(--ink)}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--acid);outline-offset:4px;border-radius:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ---------- Header ---------- */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;margin-inline:calc(var(--gutter) * -1);padding:14px var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:1rem;background:rgba(11,11,12,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:transform .45s var(--ease),border-color .3s}
+.site-header.scrolled{border-bottom-color:var(--line)}
+.site-header.away{transform:translateY(-110%)}
+.sig-logo{display:inline-grid;place-items:center;width:44px;height:44px;border:1.5px solid var(--paper);border-radius:50%;font-family:var(--display);font-weight:900;font-size:1.15rem;letter-spacing:.02em;line-height:1;text-decoration:none;color:var(--paper);transition:color .25s,border-color .25s,transform .5s var(--ease)}
+.sig-logo:hover{color:var(--acid);border-color:var(--acid);transform:rotate(-12deg)}
+.head-right{display:flex;align-items:center;gap:clamp(1rem,3vw,2.5rem)}
+.nav{display:flex;gap:clamp(1rem,2.4vw,2rem)}
+.nav a,.menu-btn{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;position:relative;padding-block:4px}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--acid);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
+.nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.lang{display:flex;align-items:center;gap:2px;font-family:var(--mono);font-size:12px;border:1px solid var(--line);border-radius:999px;padding:3px}
+.lang button{background:none;border:0;padding:5px 10px;border-radius:999px;cursor:pointer;color:var(--muted);letter-spacing:.1em;transition:background .2s,color .2s}
+.lang button[aria-pressed="true"]{background:var(--acid);color:var(--ink)}
+.lang button:not([aria-pressed="true"]):hover{color:var(--paper)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:999px;padding:8px 14px;cursor:pointer}
+@media (max-width:760px){.nav{display:none}.menu-btn{display:inline-block}}
+
+.menu{position:fixed;inset:0;z-index:80;background:var(--ink);padding:calc(env(safe-area-inset-top,0px) + 18px) var(--gutter) calc(env(safe-area-inset-bottom,0px) + 24px);display:flex;flex-direction:column}
+.menu-top{display:flex;justify-content:space-between;align-items:center}
+.menu nav{margin-block:auto;display:flex;flex-direction:column;gap:.25rem}
+.menu nav a{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(3rem,15vw,7rem);line-height:.9;text-decoration:none}
+.menu nav a:hover,.menu nav a:focus-visible{color:var(--acid)}
+.menu-foot{font-family:var(--mono);font-size:12px;color:var(--muted);word-break:break-all}
+
+/* ---------- Shared type ---------- */
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin:0;display:flex;gap:.75em;align-items:center}
+.eyebrow .idx{color:var(--acid)}
+.headline{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(3.4rem,12.5vw,12rem);line-height:.86;letter-spacing:-.005em;margin:0;text-wrap:balance}
+section{padding-block:clamp(5rem,12vw,11rem)}
+.sec-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:1.25rem 1.5rem;align-items:end;margin-bottom:clamp(2.5rem,6vw,5rem)}
+.sec-head .eyebrow{grid-column:1/4;align-self:start;padding-top:.6rem}
+.sec-head .headline{grid-column:4/13}
+@media (max-width:760px){.sec-head .eyebrow,.sec-head .headline{grid-column:1/-1}}
+.hand{font-family:var(--hand);font-weight:700}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:.6em;padding:.95em 1.4em;border-radius:999px;font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1px solid var(--paper);cursor:pointer;transition:background .25s,color .25s,border-color .25s;white-space:nowrap}
+.btn .arr{display:inline-block;transition:transform .3s var(--ease)}
+.btn:hover .arr{transform:translate(3px,-3px)}
+.btn-down:hover .arr{transform:translateY(3px)}
+.btn-primary{background:var(--acid);border-color:var(--acid);color:var(--ink)}
+.btn-primary:hover{background:var(--paper);border-color:var(--paper)}
+.btn-ghost{background:transparent;color:var(--paper)}
+.btn-ghost:hover{border-color:var(--acid);color:var(--acid)}
+
+/* ---------- Hero ---------- */
+.hero{min-height:calc(100svh - 72px);display:flex;flex-direction:column;justify-content:space-between;gap:clamp(1.5rem,4vw,3rem);padding-block:clamp(1.25rem,3vw,2.5rem) clamp(1.5rem,4vw,3rem)}
+.hero-meta{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.hero-meta .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--acid);margin-right:.6em;vertical-align:1px;box-shadow:0 0 12px var(--acid)}
+.hero-title{position:relative}
+.hero-name{margin:0;font-family:var(--display);font-weight:900;line-height:.8;text-transform:uppercase;padding-top:.32em;margin-top:-.32em;cursor:default}
+.fit{display:inline-block;white-space:nowrap;font-size:19vw}
+.hero-name .ch,.talk .ch{display:inline-block}
+.chi{display:inline-block;transform-origin:50% 100%;will-change:transform,color}
+.ch.sp{width:.22em}
+.fit .gap{display:inline-block;width:.24em}
+.fit.stacked .word{display:block;white-space:nowrap;line-height:.84}
+.fit.stacked .gap{display:none}
+.rotator{all:unset;box-sizing:border-box;display:flex;align-items:center;gap:1rem;width:100%;max-width:38rem;font-family:var(--mono);font-size:13px;letter-spacing:.04em;color:var(--paper);border-block:1px solid var(--line);padding-block:.85rem;cursor:pointer;background:rgba(11,11,12,.45)}
+.rotator:focus-visible{outline:2px solid var(--acid);outline-offset:4px}
+.rot-idx{color:var(--acid);flex-shrink:0;font-variant-numeric:tabular-nums}
+.rot-text{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rot-bar{width:56px;height:2px;background:var(--line);position:relative;overflow:hidden;flex-shrink:0}
+.rot-bar i{position:absolute;inset:0;background:var(--acid);transform-origin:left;transform:scaleX(0)}
+@media (max-width:760px){.rot-text{white-space:normal;min-height:2.9em;line-height:1.45}}
+@keyframes sealSpin{to{transform:rotate(360deg)}}
+@keyframes sealIn{from{opacity:0;transform:scale(.6) rotate(-40deg)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){.seal-ring{animation:sealSpin 22s linear infinite}.seal:hover .seal-ring{animation-duration:6s}.seal{animation:sealIn 1.1s var(--ease) .7s both}}
+.seal{--seal:clamp(104px,13vw,184px);position:absolute;right:4%;bottom:calc(var(--seal) * -.62);width:var(--seal);aspect-ratio:1;max-width:100%;border-radius:50%;background:rgba(11,11,12,.82);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border:1px solid var(--line);display:grid;place-items:center;z-index:2}
+.seal-ring{position:absolute;inset:6%;width:88%;height:88%;overflow:visible}
+.seal-ring text{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;fill:var(--paper);text-transform:uppercase}
+.seal-mono{font-family:var(--display);font-weight:900;font-size:clamp(2rem,3.6vw,3.4rem);line-height:1;color:var(--acid);letter-spacing:.02em;transition:transform .5s var(--ease),text-shadow .4s}
+.seal:hover .seal-mono{transform:scale(1.08);text-shadow:0 0 24px rgba(200,255,0,.45)}
+.seal::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid var(--acid);opacity:.35;pointer-events:none}
+.hero-foot{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:1.5rem;align-items:end}
+.portrait-wrap{grid-column:1/4;position:relative;width:100%;max-width:270px}
+.portrait{margin:0;width:100%;aspect-ratio:4/5;max-width:100%;position:relative;overflow:hidden;background:var(--surface)}
+.portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 38%;filter:grayscale(.9) contrast(1.12) brightness(.92);transform:scale(1.04);transition:filter .8s var(--ease),transform 1.2s var(--ease)}
+.portrait-wrap:hover .portrait img{filter:grayscale(0) contrast(1.04) brightness(1);transform:scale(1)}
+.portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(11,11,12,.55));pointer-events:none}
+.portrait-wrap::before,.portrait-wrap::after{content:"";position:absolute;width:18px;height:18px;border-color:var(--acid);border-style:solid;z-index:2}
+.portrait-wrap::before{top:-6px;left:-6px;border-width:2px 0 0 2px}
+.portrait-wrap::after{bottom:-6px;right:-6px;border-width:0 2px 2px 0}
+.me-note{position:absolute;top:-1.6em;left:calc(100% - 1.6rem);font-family:var(--hand);font-weight:700;font-size:clamp(1.5rem,2.2vw,2rem);color:var(--acid);white-space:nowrap;transform:rotate(-8deg);display:flex;align-items:flex-end;gap:.15em;line-height:1;pointer-events:none;z-index:3}
+.me-note svg{width:34px;height:34px;stroke:var(--acid);fill:none;stroke-width:2.5;stroke-linecap:round;transform:translateY(.55em)}
+.hero-copy{grid-column:6/13;display:flex;flex-direction:column;gap:1.75rem}
+.hero-sub{margin:0;font-size:clamp(1.35rem,2.5vw,2.25rem);line-height:1.18;font-weight:500;letter-spacing:-.01em;max-width:28ch;text-wrap:balance}
+.hero-sub em{font-style:normal;color:var(--acid)}
+.hero-cta{display:flex;gap:.75rem;flex-wrap:wrap}
+@media (max-width:760px){
+  .hero-foot{grid-template-columns:1fr}
+  .portrait-wrap,.hero-copy{grid-column:1/-1}
+  .portrait-wrap{max-width:200px;margin-top:1.5rem}
+  .me-note{top:42%;left:calc(100% + .4rem);transform:rotate(-6deg)}
+  .me-note svg{transform:none}
+  .seal{--seal:92px;right:0}
+}
+
+/* load sequence */
+@keyframes rise{from{opacity:0;transform:translateY(35%)}to{opacity:1;transform:none}}
+@keyframes wipe{from{clip-path:inset(-20% 100% -20% 0)}to{clip-path:inset(-20% -5% -20% 0)}}
+@keyframes draw{from{stroke-dashoffset:520}to{stroke-dashoffset:0}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:no-preference){
+  .hero-name .ch{animation:rise .95s var(--ease) both;animation-delay:calc(var(--i) * 45ms)}
+
+
+  .hero-meta,.hero-foot{animation:fadeUp .9s var(--ease) .35s both}
+}
+
+/* ---------- Telemetry ---------- */
+.telemetry{padding-block:0 clamp(4rem,9vw,8rem)}
+.tlm-head{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:1rem;margin-bottom:0}
+.tlm{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--line)}
+.stat{padding:clamp(1.5rem,3vw,2.5rem) clamp(1rem,2.4vw,2rem) clamp(1.5rem,3vw,2.5rem) 0;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:.75rem;min-width:0;container-type:inline-size;background:rgba(11,11,12,.55)}
+.stat+.stat{padding-left:clamp(1rem,2.4vw,2rem)}
+.stat:last-child{border-right:0}
+.stat-k{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.14em}
+.stat-num{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,6vw,6.5rem);font-size:clamp(2.4rem,29cqi,7.5rem);line-height:.85;color:var(--acid);font-variant-numeric:tabular-nums;white-space:nowrap;max-width:100%}
+.stat-num .suf{font-size:.45em;vertical-align:.95em;margin-left:.04em}
+.stat-l{margin:0;color:var(--paper);opacity:.8;font-size:15px;line-height:1.4;max-width:24ch}
+@media (max-width:760px){
+  .tlm{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .stat:nth-child(3){padding-left:0}
+}
+
+/* ---------- About ---------- */
+.about-body{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:2.5rem 1.5rem}
+.about-text{grid-column:4/12;margin:0;font-size:clamp(1.3rem,2.3vw,2.05rem);line-height:1.32;letter-spacing:-.01em;font-weight:500}
+.facts{grid-column:4/13;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:0;margin:0;border-top:1px solid var(--line)}
+.facts>div{padding:1.1rem 1.25rem 1.1rem 0;border-bottom:1px solid var(--line);min-width:0}
+.facts dt{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
+.facts dd{margin:0;font-size:15px}
+@media (max-width:760px){.about-text,.facts{grid-column:1/-1}}
+
+/* ---------- Made of ---------- */
+.made-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;align-items:start}
+.made{position:relative;border:1px solid var(--line);background:rgba(20,21,19,.82);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:clamp(1.5rem,2.6vw,2.25rem);display:flex;flex-direction:column;gap:1.1rem;min-width:0;transition:border-color .4s,transform .6s var(--ease)}
+.made:nth-child(2){margin-top:clamp(0rem,6vw,5rem)}
+.made:nth-child(3){margin-top:clamp(0rem,3vw,2.5rem)}
+.made:hover{border-color:var(--acid);transform:translateY(-6px)}
+.made-tag{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acid);margin:0}
+.made-big{font-family:var(--display);font-weight:900;font-size:clamp(4rem,8vw,7rem);line-height:.82;color:transparent;-webkit-text-stroke:1.5px var(--paper);transition:color .35s,-webkit-text-stroke-color .35s}
+.made:hover .made-big{color:var(--acid);-webkit-text-stroke-color:var(--acid)}
+.made h3{margin:0;font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(1.9rem,2.8vw,2.6rem);line-height:.95;text-wrap:balance}
+.made ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.made li{padding-block:.65rem;border-bottom:1px solid var(--line);font-size:15px;line-height:1.45}
+.made li small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--muted);margin-top:.15rem}
+.made .note{position:absolute;top:-1.15em;right:1rem;font-family:var(--hand);font-weight:700;font-size:clamp(1.35rem,2vw,1.75rem);color:var(--paper);transform:rotate(3deg);line-height:1;background:var(--ink);padding:0 .35em;white-space:nowrap}
+@media (max-width:900px){.made-grid{grid-template-columns:1fr}.made:nth-child(n){margin-top:0}}
+
+/* ---------- Projects ---------- */
+.projects{display:flex;flex-direction:column;gap:clamp(4rem,9vw,8rem)}
+.project{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:2rem 1.5rem;align-items:center;position:relative}
+.p-media{grid-column:1/8;position:relative;overflow:hidden;aspect-ratio:16/10;max-width:100%;background:var(--surface);border:1px solid var(--line)}
+.p-body{grid-column:8/13;min-width:0;display:flex;flex-direction:column;gap:1.1rem}
+.project:nth-child(even) .p-media{grid-column:6/13;order:2}
+.project:nth-child(even) .p-body{grid-column:1/6}
+.p-media-in{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(var(--line) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/48px 48px,radial-gradient(120% 90% at 80% 10%,rgba(200,255,0,.08),transparent 60%);transition:transform 1s var(--ease)}
+.project:hover .p-media-in{transform:scale(1.06)}
+.p-mono{font-family:var(--display);font-weight:900;font-size:clamp(4rem,13vw,11rem);line-height:1;color:transparent;-webkit-text-stroke:1.5px var(--muted);letter-spacing:.02em;transition:-webkit-text-stroke-color .4s}
+.project:hover .p-mono{-webkit-text-stroke-color:var(--acid)}
+.p-ph{position:absolute;left:14px;bottom:12px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.p-meta{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);display:flex;gap:1em;flex-wrap:wrap}
+.p-meta .n{color:var(--acid)}
+.p-title{margin:0;font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(2.4rem,5vw,4.6rem);line-height:.92;text-wrap:balance}
+.p-title span{background:linear-gradient(var(--acid),var(--acid)) 0 100%/0% 4px no-repeat;padding-bottom:.06em;transition:background-size .55s var(--ease)}
+.project:hover .p-title span{background-size:100% 4px}
+.p-desc{margin:0;font-size:17px;line-height:1.55;max-width:46ch;color:var(--paper);opacity:.88}
+.p-dl{margin:0;display:flex;flex-direction:column;gap:.9rem;border-top:1px solid var(--line);padding-top:1rem}
+.p-dl dt{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.p-dl dd{margin:0;font-size:15px;line-height:1.5}
+.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.4rem}
+.tags li{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;border:1px solid var(--line);border-radius:999px;padding:.35em .85em;transition:border-color .3s,color .3s}
+.project:hover .tags li{border-color:#3a3d33}
+.p-note{position:absolute;font-family:var(--hand);font-weight:700;font-size:clamp(1.5rem,2.4vw,2.1rem);color:var(--acid);transform:rotate(-7deg);line-height:1;pointer-events:none;display:flex;align-items:flex-end;gap:.2em}
+.p-note svg{width:42px;height:34px;stroke:var(--acid);fill:none;stroke-width:2.5;stroke-linecap:round}
+.p-note.tr{top:-1.1em;right:2%}
+.p-note.tl{top:-1.1em;left:2%}
+.p-actions{display:flex;gap:.6rem;flex-wrap:wrap}
+@media (max-width:860px){
+  .project{grid-template-columns:1fr}
+  .p-media,.p-body,.project:nth-child(even) .p-media,.project:nth-child(even) .p-body{grid-column:1/-1;order:0}
+}
+
+/* ---------- Experience ---------- */
+.exp-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:3.5rem 1.5rem;align-items:start}
+.exp-grid .timeline{grid-column:1/9}
+.courses{grid-column:9/13;position:sticky;top:calc(env(safe-area-inset-top,0px) + 96px);border:1px solid var(--line);background:rgba(20,21,19,.82);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:1.5rem;display:flex;flex-direction:column;gap:1.5rem;min-width:0}
+.courses h3{margin:0;font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(1.7rem,2.4vw,2.3rem);line-height:.95}
+.c-block h4{margin:0 0 .5rem;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--acid)}
+.c-block .via{margin:0 0 .5rem;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);line-height:1.6}
+.c-block ul{list-style:none;margin:0;padding:0}
+.c-block li{font-size:14.5px;padding-block:.45rem;border-bottom:1px solid var(--line);line-height:1.4}
+@media (max-width:960px){.exp-grid .timeline,.courses{grid-column:1/-1}.courses{position:static}}
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;top:.5rem;bottom:.5rem;left:calc(25% - .5px);width:1px;background:var(--line)}
+.tl-item{display:grid;grid-template-columns:25% minmax(0,1fr);padding-block:0 clamp(3rem,6vw,5rem);position:relative}
+.tl-item:last-child{padding-bottom:0}
+.tl-date{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:.55rem 2rem 0 0;font-variant-numeric:tabular-nums}
+.tl-item::after{content:"";position:absolute;left:calc(25% - 6px);top:.6rem;width:11px;height:11px;border-radius:50%;background:var(--ink);border:2px solid var(--acid)}
+.tl-body{padding-left:clamp(1.5rem,4vw,3.5rem);display:flex;flex-direction:column;gap:.6rem;min-width:0}
+.tl-role{margin:0;font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(2rem,4.2vw,3.8rem);line-height:.95;text-wrap:balance}
+.tl-org{margin:0;font-family:var(--mono);font-size:13px;letter-spacing:.08em;color:var(--acid)}
+.tl-body ul{margin:.5rem 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:.5rem;max-width:58ch}
+.tl-body li{padding-left:1.4rem;position:relative;font-size:17px;opacity:.88}
+.tl-body li::before{content:"";position:absolute;left:0;top:.75em;width:.7rem;height:1px;background:var(--muted)}
+@media (max-width:760px){
+  .timeline::before{left:5px}
+  .tl-item{grid-template-columns:1fr;padding-left:2rem}
+  .tl-item::after{left:0;top:.35rem}
+  .tl-date{padding:0 0 .5rem}
+  .tl-body{padding-left:0}
+}
+
+/* ---------- Toolbox ---------- */
+.toolbox{padding-bottom:clamp(5rem,12vw,11rem)}
+.mq-host{margin-bottom:clamp(3rem,6vw,5rem)}
+.mq-host .marquee{margin-bottom:0}
+.mq-host .marquee+.marquee{border-top:0}
+.mq-label{position:absolute;left:var(--gutter);top:.7rem;z-index:2;font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acid);background:var(--ink);padding:0 .5em}
+.mq-lead .mq-word{font-size:clamp(2.2rem,6vw,5.4rem);color:var(--paper);-webkit-text-stroke:0;opacity:.82}
+.mq-lead .mq-word:hover{color:var(--acid);opacity:1}
+.mq-lead .mq-sep{font-size:clamp(1.6rem,4vw,3.4rem)}
+.marquee{position:relative;margin-inline:calc(var(--gutter) * -1);overflow:hidden;border-block:1px solid var(--line);padding-block:clamp(1rem,2.5vw,2rem);margin-bottom:clamp(3rem,6vw,5rem)}
+.mq-track{display:flex;width:max-content}
+.mq-group{display:flex;align-items:center;flex-shrink:0}
+.mq-word{font-family:var(--display);font-weight:900;font-size:clamp(4rem,13vw,12.5rem);line-height:1;text-transform:uppercase;color:transparent;-webkit-text-stroke:1.5px var(--paper);padding-inline:.12em;transition:color .25s,-webkit-text-stroke-color .25s}
+.mq-word:hover{color:var(--acid);-webkit-text-stroke-color:var(--acid)}
+.mq-sep{color:var(--acid);font-family:var(--display);font-weight:900;font-size:clamp(2.5rem,7vw,6rem);padding-inline:.25em;line-height:1}
+@keyframes marquee{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:no-preference){.mq-track{animation:marquee 60s linear infinite}.mq-lead .mq-track{animation-duration:46s;animation-direction:reverse}.marquee:hover .mq-track{animation-play-state:paused}}
+@media (prefers-reduced-motion:reduce){.mq-track{width:auto;flex-wrap:wrap;padding-inline:var(--gutter)}.mq-group{flex-wrap:wrap}.mq-group[aria-hidden]{display:none}.mq-word{font-size:clamp(2.5rem,8vw,6rem)}}
+.tool-cols{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:2.5rem 1.5rem}
+.tool-col{min-width:0}
+.tool-col:first-child{grid-column:4/8}
+.tool-col:last-child{grid-column:9/13}
+.tool-col h3{margin:0 0 1rem;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--acid)}
+.tool-col ul{list-style:none;margin:0;padding:0}
+.tool-col li{display:flex;justify-content:space-between;gap:1rem;padding-block:.7rem;border-bottom:1px solid var(--line);font-size:15px}
+.tool-col li span:first-child{color:var(--muted);font-family:var(--mono);font-size:12px;letter-spacing:.06em;padding-top:.15em}
+.tool-col li span:last-child{text-align:right}
+.tool-col.lead li{justify-content:flex-start}
+@media (max-width:760px){.tool-col:first-child,.tool-col:last-child{grid-column:1/-1}}
+
+/* ---------- Beyond code ---------- */
+.beyond-grid{display:grid;align-items:start;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(2.5rem,5vw,4rem) 1.5rem;padding-top:1rem}
+.card{position:relative;background:var(--surface);border:1px solid var(--line);padding:clamp(1.5rem,3vw,2.5rem);display:flex;flex-direction:column;gap:1rem;min-width:0;transition:transform .5s var(--ease),border-color .3s}
+.card:hover{transform:translateY(-4px);border-color:var(--muted)}
+.card:nth-child(1){grid-column:1/7}
+.card:nth-child(2){grid-column:7/13;margin-top:5rem}
+.card:nth-child(3){grid-column:2/7}
+.card:nth-child(4){grid-column:7/13;margin-top:3rem}
+.card:nth-child(5){grid-column:4/10}
+.card-big{font-family:var(--display);font-weight:900;font-size:clamp(4.5rem,10vw,8.5rem);line-height:.85;color:transparent;-webkit-text-stroke:1.5px var(--paper);transition:color .3s,-webkit-text-stroke-color .3s}
+.card:hover .card-big{color:var(--acid);-webkit-text-stroke-color:var(--acid)}
+.card p{margin:0;font-size:17px;line-height:1.45;max-width:36ch}
+.card .note{position:absolute;top:-1.15em;right:1.2rem;font-family:var(--hand);font-weight:700;font-size:clamp(1.4rem,2.2vw,1.9rem);color:var(--paper);transform:rotate(4deg);line-height:1;display:flex;align-items:flex-end;gap:.25em;background:var(--ink);padding:0 .35em}
+.card .note svg{width:30px;height:28px;stroke:var(--acid);fill:none;stroke-width:2.5;stroke-linecap:round}
+.card-media{all:unset;box-sizing:border-box;display:block;position:relative;margin:calc(clamp(1.5rem,3vw,2.5rem) * -1) calc(clamp(1.5rem,3vw,2.5rem) * -1) 0;aspect-ratio:3/2;max-width:none;overflow:hidden;cursor:zoom-in;background:var(--ink);border-bottom:1px solid var(--line)}
+.card-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .7s var(--ease),transform 5s var(--ease)}
+.card-media .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.3s var(--ease)}
+.card-media .slide.on{opacity:1}
+.card-media .col{opacity:0}
+.media-dots{position:absolute;right:14px;top:18px;z-index:1;display:flex;gap:5px}
+.media-dots i{width:14px;height:2px;background:rgba(241,240,234,.35);transition:background .4s,width .4s}
+.media-dots i.on{background:var(--acid);width:24px}
+.plates{cursor:default;background:linear-gradient(var(--line) 1px,transparent 1px) 0 0/36px 36px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/36px 36px,radial-gradient(90% 80% at 75% 20%,rgba(200,255,0,.10),transparent 60%),var(--ink)}
+.plate{display:flex;flex-direction:column;justify-content:center;padding:0 clamp(1.25rem,3vw,2.5rem);gap:.35rem}
+.plate b{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(2.6rem,6vw,4.6rem);line-height:.9;color:var(--paper);letter-spacing:.01em;transition:color .4s}
+.plate em{font-style:normal;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--acid)}
+.card:hover .plate b{color:var(--acid)}
+.card{container-type:inline-size}
+.has-photo .card-big.long{font-size:clamp(2.4rem,13cqi,5.2rem);text-transform:uppercase}
+.card-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,0) 45%,rgba(11,11,12,.75));pointer-events:none}
+.card-media .slide.on img{transform:scale(1.035)}
+.card:hover .card-media img,.card-media:focus-visible img{transform:scale(1.06)}
+.card:hover .card-media .col,.card-media:focus-visible .col{opacity:1}
+.card-media:focus-visible{outline:2px solid var(--acid);outline-offset:-2px}
+.media-tag{position:absolute;left:14px;top:12px;z-index:1;display:inline-flex;align-items:center;gap:.5em;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--paper);background:rgba(11,11,12,.7);border:1px solid var(--line);border-radius:999px;padding:.45em .9em;transition:border-color .3s,color .3s}
+.media-tag svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.3}
+.card:hover .media-tag{border-color:var(--acid);color:var(--acid)}
+.has-photo .card-big{font-size:clamp(3.2rem,6vw,5.2rem);margin-top:-.55em;position:relative;z-index:1;padding-left:.02em}
+.has-photo .note{z-index:2}
+@media (max-width:760px){.card:nth-child(n){grid-column:1/-1;margin-top:0}}
+.lightbox{position:fixed;inset:0;z-index:120;background:rgba(11,11,12,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:flex;flex-direction:column;padding:calc(env(safe-area-inset-top,0px) + 16px) var(--gutter) calc(env(safe-area-inset-bottom,0px) + 16px);gap:1rem}
+.lb-top{display:flex;justify-content:space-between;align-items:center}
+.lb-count{font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--acid);font-variant-numeric:tabular-nums}
+.lb-btn{background:none;border:1px solid var(--line);color:var(--paper);border-radius:999px;width:44px;height:44px;display:grid;place-items:center;cursor:pointer;font-size:16px;transition:border-color .2s,color .2s;flex-shrink:0}
+.lb-btn:hover{border-color:var(--acid);color:var(--acid)}
+.lb-stage{flex:1;min-height:0;margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
+.lb-stage img{max-width:100%;max-height:calc(100% - 3rem);object-fit:contain;display:block;border:1px solid var(--line);transition:opacity .35s var(--ease)}
+.lb-stage img.fade{opacity:0}
+.lb-stage figcaption{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--paper);opacity:.8;text-align:center;max-width:60ch}
+.lb-nav{display:flex;align-items:center;justify-content:center;gap:1rem}
+.lb-thumbs{display:flex;gap:.5rem;overflow-x:auto;max-width:100%}
+.lb-thumbs button{all:unset;cursor:pointer;width:64px;height:44px;flex-shrink:0;border:1px solid var(--line);background-size:cover;background-position:center;filter:grayscale(1) brightness(.7);transition:filter .3s,border-color .3s}
+.lb-thumbs button[aria-current="true"]{filter:none;border-color:var(--acid)}
+.lb-thumbs button:focus-visible{outline:2px solid var(--acid);outline-offset:2px}
+
+/* ---------- Education ---------- */
+.edu{padding-top:0}
+.edu-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.edu-item{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:1rem 1.5rem;align-items:center;padding-block:clamp(1.25rem,3vw,2rem);border-bottom:1px solid var(--line)}
+.edu-year{grid-column:1/4;font-family:var(--display);font-weight:900;font-size:clamp(3rem,7vw,6rem);line-height:.85;color:transparent;-webkit-text-stroke:1.5px var(--paper);font-variant-numeric:tabular-nums;position:relative;width:max-content;max-width:100%}
+.edu-year .hand{position:absolute;right:-.2em;top:-.55em;font-size:.32em;color:var(--acid);-webkit-text-stroke:0;transform:rotate(8deg)}
+.edu-title{grid-column:4/10;margin:0;font-size:clamp(1.15rem,1.8vw,1.5rem);font-weight:500;line-height:1.3;min-width:0}
+.edu-school{grid-column:10/13;margin:0;font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:right}
+@media (max-width:760px){.edu-year,.edu-title,.edu-school{grid-column:1/-1;text-align:left}}
+
+/* ---------- Contact ---------- */
+.contact{padding-bottom:clamp(4rem,8vw,7rem)}
+.contact .eyebrow{margin-bottom:clamp(1.5rem,3vw,2.5rem)}
+.talk{display:block;text-decoration:none;font-family:var(--display);font-weight:900;text-transform:uppercase;line-height:.82;padding-top:.3em;margin-top:-.2em;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.contact-row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:2rem 1.5rem;align-items:center;border-top:1px solid var(--line);padding-top:2rem}
+.avail{grid-column:1/4;margin:0;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);line-height:1.8}
+.contact-row .mail-row{grid-column:4/8;border:0;padding:0}
+.contact-row .links{grid-column:8/13;justify-content:flex-end}
+@media (max-width:1000px){.avail,.contact-row .mail-row,.contact-row .links{grid-column:1/-1;justify-content:flex-start}}
+.talk:hover,.talk:focus-visible{color:var(--acid)}
+.contact-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:3rem 1.5rem}
+.contact-info{grid-column:1/6;display:flex;flex-direction:column;gap:1.75rem;min-width:0}
+.contact-info>p{margin:0;font-size:clamp(1.2rem,1.9vw,1.6rem);line-height:1.3;font-weight:500;max-width:28ch}
+.mail-row{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;border-block:1px solid var(--line);padding-block:1rem}
+.mail-row code{font-family:var(--mono);font-size:clamp(12px,1.25vw,14px);user-select:all;word-break:break-all;min-width:0;flex:1 1 220px}
+.copy-btn{background:none;border:1px solid var(--line);border-radius:999px;padding:.45em 1em;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:border-color .2s,color .2s}
+.copy-btn:hover{border-color:var(--acid);color:var(--acid)}
+.links{display:flex;flex-wrap:wrap;gap:.6rem}
+.form{grid-column:7/13;display:flex;flex-direction:column;gap:1.4rem;min-width:0}
+.field{display:flex;flex-direction:column;gap:.4rem}
+.field label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.field input,.field textarea{background:transparent;border:0;border-bottom:1px solid var(--line);color:var(--paper);font:inherit;font-size:18px;padding:.5rem 0;border-radius:0;transition:border-color .25s;width:100%}
+.field textarea{resize:vertical;min-height:7rem}
+.field input:focus,.field textarea:focus{outline:none;border-bottom-color:var(--acid)}
+.field .err{font-size:13px;color:var(--acid);min-height:0}
+.form-foot{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.form-result{border:1px solid var(--acid);padding:1.25rem;display:flex;flex-direction:column;gap:1rem}
+.form-result p{margin:0;font-size:15px}
+.form-result div{display:flex;gap:.6rem;flex-wrap:wrap}
+@media (max-width:860px){.contact-info,.form{grid-column:1/-1}}
+
+/* ---------- Footer ---------- */
+.foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;border-top:1px solid var(--line);padding-block:1.75rem calc(1.75rem + env(safe-area-inset-bottom,0px));font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--muted)}
+.foot .sig-logo{width:40px;height:40px;font-size:1rem}
+.top-btn{background:none;border:1px solid var(--line);border-radius:999px;padding:.6em 1.1em;cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);transition:border-color .2s,color .2s}
+.top-btn:hover{border-color:var(--acid);color:var(--acid)}
+
+/* ---------- Cinematic background ---------- */
+#bgHost{position:fixed;inset:0;z-index:0;pointer-events:none;background:var(--ink)}
+#bgHost canvas{position:absolute;inset:0;width:100%!important;height:100%!important;display:block}
+.vignette{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(120% 85% at 50% 45%,transparent 45%,rgba(11,11,12,.85) 100%),linear-gradient(180deg,rgba(11,11,12,.0) 0%,rgba(11,11,12,.0) 70%,rgba(11,11,12,.5) 100%)}
+main,.foot{position:relative;z-index:1}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--acid);transform-origin:left;transform:scaleX(0);box-shadow:0 0 10px var(--acid)}
+.p-media{background:rgba(20,21,19,.85)}
+.card,.form-result{background:rgba(20,21,19,.88)}
+
+/* ---------- Toast ---------- */
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;z-index:95;background:var(--paper);color:var(--ink);font-family:var(--mono);font-size:12px;letter-spacing:.06em;padding:.8em 1.2em;border-radius:999px;transition:opacity .3s,transform .3s var(--ease);pointer-events:none;max-width:calc(100% - 32px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- Scroll reveals (armed only after the visitor scrolls) ---------- */
+.pre{opacity:0;transform:translateY(36px)}
+.pre.in{opacity:1;transform:none;transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.split .ln{display:block;overflow:hidden;padding-block:.08em;margin-block:-.08em}
+.split .ln-i{display:block;transform:translateY(110%)}
+.split.in .ln-i{transform:none;transition:transform .95s var(--ease);transition-delay:calc(var(--d) * 90ms)}
+
+/* ---------- Custom cursor ---------- */
+.cursor{display:none}
+.has-cursor body,.has-cursor a,.has-cursor button{cursor:none}
+.has-cursor input,.has-cursor textarea{cursor:text}
+.has-cursor .cursor{display:block}
+.c-dot,.c-ring{position:fixed;left:0;top:0;pointer-events:none;z-index:130;border-radius:50%}
+.c-dot{width:6px;height:6px;margin:-3px 0 0 -3px;background:var(--acid)}
+.c-ring{width:38px;height:38px;margin:-19px 0 0 -19px;border:1px solid rgba(241,240,234,.55);transition:width .3s var(--ease),height .3s var(--ease),margin .3s var(--ease),background .3s,border-color .3s}
+.c-ring.big{width:72px;height:72px;margin:-36px 0 0 -36px;border-color:var(--acid);background:rgba(200,255,0,.08)}
+.c-ring.hide,.c-dot.hide{opacity:0}
+</style>
+
+<div id="bgHost" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><div class="c-ring"></div><div class="c-dot"></div></div>
+
+<header class="site-header" id="header">
+  <a class="sig-logo" href="#top" aria-label="Tiago João, back to top">TJ</a>
+  <div class="head-right">
+    <nav class="nav" aria-label="Main">
+      <a href="#work" data-i18n="nav.work">Work</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#experience" data-i18n="nav.exp">Experience</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+    </div>
+    <button type="button" class="menu-btn" id="menuOpen" aria-expanded="false" aria-controls="menu" data-i18n="nav.menu">Menu</button>
+  </div>
+  <span class="progress" id="progress" aria-hidden="true"></span>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <div class="menu-top">
+    <span class="sig-logo" aria-hidden="true">TJ</span>
+    <button type="button" class="menu-btn" id="menuClose" style="display:inline-block" data-i18n="nav.close">Close</button>
+  </div>
+  <nav aria-label="Mobile">
+    <a href="#work" data-i18n="nav.work">Work</a>
+    <a href="#about" data-i18n="nav.about">About</a>
+    <a href="#experience" data-i18n="nav.exp">Experience</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
+  </nav>
+  <p class="menu-foot">tiagomartinsrodriguesjoao@gmail.com</p>
+</div>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="heroName">
+    <div class="hero-meta">
+      <span><span class="dot" aria-hidden="true"></span><span data-i18n="hero.role">Full Stack Developer &amp; Tech Lead</span></span>
+      <span data-i18n="hero.loc">Florianópolis, BR · Open to remote · EU work authorized</span>
+    </div>
+
+    <div class="hero-title">
+      <h1 class="hero-name" id="heroName" aria-label="Tiago João"><span class="fit stack" data-letters aria-hidden="true"><span class="word"><span class="ch" style="--i:0"><span class="chi">T</span></span><span class="ch" style="--i:1"><span class="chi">I</span></span><span class="ch" style="--i:2"><span class="chi">A</span></span><span class="ch" style="--i:3"><span class="chi">G</span></span><span class="ch" style="--i:4"><span class="chi">O</span></span></span><span class="gap"> </span><span class="word"><span class="ch" style="--i:6"><span class="chi">J</span></span><span class="ch" style="--i:7"><span class="chi">O</span></span><span class="ch" style="--i:8"><span class="chi">Ã</span></span><span class="ch" style="--i:9"><span class="chi">O</span></span></span></span></h1>
+      <div class="seal" aria-hidden="true">
+        <svg class="seal-ring" viewBox="0 0 200 200"><defs><path id="sealPath" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs><text><textPath href="#sealPath" textLength="512" lengthAdjust="spacing">Tiago João · Full stack · Tech lead · Florianópolis · </textPath></text></svg>
+        <span class="seal-mono">TJ</span>
+      </div>
+    </div>
+
+    <div class="hero-foot">
+      <div class="portrait-wrap">
+        <figure class="portrait"><img src="assets/tiago-joao.jpg" alt="Portrait of Tiago João" data-i18n-alt="hero.alt" width="768" height="1024"></figure>
+        <span class="me-note" aria-hidden="true"><svg viewBox="0 0 34 34"><path d="M30 6 C 22 6, 10 12, 6 26"/><path d="M3 18 L6 27 L14 22"/></svg><span data-i18n="hero.me">that's me</span></span>
+      </div>
+      <div class="hero-copy">
+        <button type="button" class="rotator" id="rotator" data-i18n-aria="rot.aria" aria-label="Show next highlight">
+          <span class="rot-idx" id="rotIdx">01 / 07</span>
+          <span class="rot-text" id="rotText">Full stack developer · Node.js, React, Supabase</span>
+          <span class="rot-bar" aria-hidden="true"><i id="rotBar"></i></span>
+        </button>
+        <p class="hero-sub" data-i18n="hero.sub">Full stack developer &amp; tech lead. I turn client problems into <em>software that ships.</em></p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-down" href="#work"><span data-i18n="btn.work">See my work</span> <span class="arr" aria-hidden="true">↓</span></a>
+          <a class="btn btn-ghost" href="mailto:tiagomartinsrodriguesjoao@gmail.com"><span data-i18n="btn.talk">Let's talk</span> <span class="arr" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TELEMETRY -->
+  <section class="telemetry" aria-label="Key numbers">
+    <div class="tlm-head">
+      <p class="eyebrow"><span class="idx">●</span><span data-i18n="tlm.k">Telemetry</span></p>
+      <p class="eyebrow" aria-hidden="true">LIVE · 04 CH</p>
+    </div>
+    <div class="tlm">
+      <div class="stat"><span class="stat-k">CH.01</span><span class="stat-num" data-stat="0">10<span class="suf">+</span></span><p class="stat-l" data-i18n="s0">projects delivered from discovery to launch</p></div>
+      <div class="stat"><span class="stat-k">CH.02</span><span class="stat-num" data-stat="1">~3,000<span class="suf"></span></span><p class="stat-l" data-i18n="s1">concurrent users on an education platform I led</p></div>
+      <div class="stat"><span class="stat-k">CH.03</span><span class="stat-num" data-stat="2">7<span class="suf"></span></span><p class="stat-l" data-i18n="s2">people in the largest team I led</p></div>
+      <div class="stat"><span class="stat-k">CH.04</span><span class="stat-num" data-stat="3">2<span class="suf">nd</span></span><p class="stat-l" data-i18n="s3">place at Startup Weekend São José 2024 (Techstars)</p></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="idx">01</span><span>—</span><span data-i18n="about.k">About</span></p>
+      <h2 class="headline" data-lines data-i18n="about.h">End to end.</h2>
+    </div>
+    <div class="about-body">
+      <p class="about-text" data-lines data-i18n="about.p">I co-founded a software, CRM and AI consultancy, where I led 10+ projects end to end: running discovery meetings with clients, turning requests into a backlog, leading developers with Scrum and presenting the deliveries. Before that, I taught programming, databases and web design at SENAI, which taught me to explain technical topics to anyone. Cybersecurity is my other passion: I trained with Cisco Networking Academy, Tempest Academy and TryHackMe, and gave an invited talk on it at Startup Weekend.</p>
+      <dl class="facts" data-reveal>
+        <div><dt data-i18n="f.base.k">Based in</dt><dd data-i18n="f.base">Florianópolis, Brazil</dd></div>
+        <div><dt data-i18n="f.work.k">Work</dt><dd data-i18n="f.work">Open to remote</dd></div>
+        <div><dt data-i18n="f.cit.k">Citizenship</dt><dd data-i18n="f.cit">Brazilian &amp; Portuguese</dd></div>
+        <div><dt data-i18n="f.eu.k">EU</dt><dd data-i18n="f.eu">Authorized to work · no visa sponsorship required</dd></div>
+        <div><dt data-i18n="f.lang.k">Languages</dt><dd data-i18n="f.lang">Portuguese (native) · English (C1) · Spanish (basic)</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- MADE OF -->
+  <section id="made" style="padding-top:0">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="idx">02</span><span>—</span><span data-i18n="made.k">What I'm made of</span></p>
+      <h2 class="headline" data-lines data-i18n="made.h">What I'm made of</h2>
+    </div>
+    <div class="made-grid">
+      <article class="made" data-reveal>
+        <span class="note" aria-hidden="true" data-i18n="m1.n">the foundation</span>
+        <span class="made-big" aria-hidden="true">DEV</span>
+        <p class="made-tag" data-i18n="m1.k">Technical training</p>
+        <h3 data-i18n="m1.h">Built to build software</h3>
+        <ul>
+          <li><span data-i18n="m1.a">Technologist Degree in Systems Analysis and Development</span><small data-i18n="m1.as">Uni SENAI · completed 2026</small></li>
+          <li><span data-i18n="m1.b">Technical High School in Systems Development</span><small>SENAI · 2023</small></li>
+          <li><span>Node.js · React · JavaScript · Python · SQL · Supabase · Docker</span><small data-i18n="m1.cs">Day-to-day stack</small></li>
+          <li><span data-i18n="m1.d">AWS mini-courses and Microsoft Learn</span><small data-i18n="m1.ds">Cloud</small></li>
+        </ul>
+      </article>
+      <article class="made" data-reveal>
+        <span class="note" aria-hidden="true" data-i18n="m2.n">continuous specialization</span>
+        <span class="made-big" aria-hidden="true">SEC</span>
+        <p class="made-tag" data-i18n="m2.k">Off-the-charts passion</p>
+        <h3 data-i18n="m2.h">Cybersecurity</h3>
+        <ul>
+          <li><span>Cisco Networking Academy · Tempest Academy · TryHackMe</span><small data-i18n="m2.as">Training</small></li>
+          <li><span>Cybersecurity Essentials · Cyber Threat Intelligence</span><small data-i18n="m2.bs">Courses</small></li>
+          <li><span>NDG Linux Unhatched · Introduction to IoT</span><small data-i18n="m2.bs">Courses</small></li>
+          <li><span data-i18n="m2.d">Invited talk on cybersecurity at Startup Weekend (Techstars)</span><small data-i18n="m2.ds">Speaker</small></li>
+        </ul>
+      </article>
+      <article class="made" data-reveal>
+        <span class="note" aria-hidden="true" data-i18n="m3.n">people first</span>
+        <span class="made-big" aria-hidden="true">LEAD</span>
+        <p class="made-tag" data-i18n="m3.k">Vocation</p>
+        <h3 data-i18n="m3.h">Management and communication</h3>
+        <ul>
+          <li><span data-i18n="m3.a">Led teams of 3–7 people with Scrum</span><small data-i18n="m3.as">Tech lead</small></li>
+          <li><span data-i18n="m3.b">Taught programming, databases and web design at SENAI</span><small data-i18n="m3.bs">Instructor</small></li>
+          <li><span data-i18n="m3.c">Master of ceremonies at the 1st Hackatech (SENAI/SC)</span><small data-i18n="m3.cs">On stage</small></li>
+          <li><span data-i18n="m3.d">Design Thinking · Project Management Tools · Leading Teams · Professional Communication</span><small data-i18n="m3.ds">SENAI qualifications</small></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="idx">03</span><span>—</span><span data-i18n="work.k">Selected work</span></p>
+      <h2 class="headline" data-lines data-i18n="work.h">Selected work</h2>
+    </div>
+
+    <div class="projects">
+      <article class="project" data-reveal>
+        <div class="p-media" aria-hidden="true"><div class="p-media-in"><span class="p-mono">EDU</span></div></div>
+        <div class="p-body">
+          <p class="p-meta"><span class="n">P/01</span><span data-i18n="p1.c">Public school network · under NDA</span></p>
+          <h3 class="p-title"><span data-i18n="p1.t">AI-powered education platform</span></h3>
+          <p class="p-desc" data-i18n="p1.d">Centralizes students' coursework, identifies learning gaps and generates AI summaries targeted at those gaps. Supports ~3,000 concurrent users with student, teacher, principal and admin roles.</p>
+          <dl class="p-dl">
+            <div><dt data-i18n="l.role">My role</dt><dd data-i18n="p1.r">Led a team of 7 (1 architect, 5 developers, 1 QA) for 5 months, from requirements to launch.</dd></div>
+            <div><dt data-i18n="l.stack">Stack</dt><dd><ul class="tags"><li>Node.js</li><li>Supabase</li><li>Docker</li><li>OpenAI</li><li>Google Gemini</li></ul></dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="project" data-reveal>
+        <span class="p-note tr" aria-hidden="true"><span data-i18n="p2.note">it's live!</span><svg viewBox="0 0 42 34"><path d="M4 6 C 16 4, 30 12, 34 28"/><path d="M26 22 L34 29 L38 19"/></svg></span>
+        <div class="p-media" aria-hidden="true"><div class="p-media-in"><span class="p-mono">LDN</span></div></div>
+        <div class="p-body">
+          <p class="p-meta"><span class="n">P/02</span><span data-i18n="p2.c">Live CRM platform</span></p>
+          <h3 class="p-title"><span>Leadnator</span></h3>
+          <p class="p-desc" data-i18n="p2.d">Live CRM platform for WhatsApp, Meta Ads and email marketing.</p>
+          <dl class="p-dl">
+            <div><dt data-i18n="l.role">My role</dt><dd data-i18n="p2.r">One of my first projects as tech lead, leading 2 developers and 1 designer.</dd></div>
+            <div><dt data-i18n="l.scope">Scope</dt><dd><ul class="tags"><li>CRM</li><li>WhatsApp</li><li>Meta Ads</li><li data-i18n="t.email">Email marketing</li></ul></dd></div>
+          </dl>
+          <div class="p-actions"><a class="btn btn-ghost" href="https://leadnator.com" target="_blank" rel="noopener"><span data-i18n="btn.visit">Visit site</span> <span class="arr" aria-hidden="true">↗</span></a></div>
+        </div>
+      </article>
+
+      <article class="project" data-reveal>
+        <div class="p-media" aria-hidden="true"><div class="p-media-in"><span class="p-mono">WOLA</span></div></div>
+        <div class="p-body">
+          <p class="p-meta"><span class="n">P/03</span><span data-i18n="p3.c">CRM platform</span></p>
+          <h3 class="p-title"><span>Wola CRM</span></h3>
+          <p class="p-desc" data-i18n="p3.d">A CRM built on top of a standard base, extended with new gateways and integrations.</p>
+          <dl class="p-dl">
+            <div><dt data-i18n="l.role">My role</dt><dd data-i18n="p3.r">Led the team that built it and ran the rollout with the client.</dd></div>
+            <div><dt data-i18n="l.scope">Scope</dt><dd><ul class="tags"><li>CRM</li><li>Gateways</li><li data-i18n="t.integrations">Integrations</li><li data-i18n="t.rollout">Rollout</li></ul></dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="project" data-reveal>
+        <div class="p-media" aria-hidden="true"><div class="p-media-in"><span class="p-mono">VOX</span></div></div>
+        <div class="p-body">
+          <p class="p-meta"><span class="n">P/04</span><span data-i18n="p4.c">Sales consultancy</span></p>
+          <h3 class="p-title"><span data-i18n="p4.t">AI voice agent for lead handling</span></h3>
+          <p class="p-desc" data-i18n="p4.d">An agent that answers leads by voice inside the CRM and interprets incoming audio messages.</p>
+          <dl class="p-dl">
+            <div><dt data-i18n="l.role">My role</dt><dd data-i18n="p4.r">Built the first phase of the architecture.</dd></div>
+            <div><dt data-i18n="l.scope">Scope</dt><dd><ul class="tags"><li data-i18n="t.ai">AI</li><li data-i18n="t.voice">Voice</li><li data-i18n="t.audio">Audio messages</li><li>CRM</li></ul></dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="project" data-reveal>
+        <span class="p-note tl" aria-hidden="true"><svg viewBox="0 0 42 34" style="transform:scaleX(-1)"><path d="M4 6 C 16 4, 30 12, 34 28"/><path d="M26 22 L34 29 L38 19"/></svg><span data-i18n="p5.note">2nd place!</span></span>
+        <div class="p-media" aria-hidden="true"><div class="p-media-in"><span class="p-mono">FT</span></div></div>
+        <div class="p-body">
+          <p class="p-meta"><span class="n">P/05</span><span data-i18n="p5.c">Startup Weekend 2024 · 2nd place</span></p>
+          <h3 class="p-title"><span>Future Task</span></h3>
+          <p class="p-desc" data-i18n="p5.d">A platform that shows interns what day-to-day work in tech careers looks like and helps companies retain new hires.</p>
+          <dl class="p-dl">
+            <div><dt data-i18n="l.context">Context</dt><dd data-i18n="p5.r">Built at Startup Weekend São José 2024 (Techstars), where it took 2nd place.</dd></div>
+            <div><dt data-i18n="l.scope">Scope</dt><dd><ul class="tags"><li>Startup Weekend</li><li>Techstars</li><li data-i18n="t.interns">Interns</li><li data-i18n="t.retention">Retention</li></ul></dd></div>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="idx">04</span><span>—</span><span data-i18n="exp.k">Experience</span></p>
+      <h2 class="headline" data-lines data-i18n="exp.h">Experience</h2>
+    </div>
+    <div class="exp-grid">
+    <ol class="timeline">
+      <li class="tl-item" data-reveal>
+        <span class="tl-date" data-i18n="e1.date">Aug 2024 – Mar 2026</span>
+        <div class="tl-body">
+          <h3 class="tl-role" data-i18n="e1.role">Co-Founder, Tech Lead &amp; Project Manager</h3>
+          <p class="tl-org">Altys Technology Solutions</p>
+          <ul>
+            <li data-i18n="e1.b1">Led 10+ software projects and scoped budgets and architectures for 10+ more.</li>
+            <li data-i18n="e1.b2">Clients' technical point of contact.</li>
+            <li data-i18n="e1.b3">Managed teams of 3–7 with Scrum.</li>
+          </ul>
+        </div>
+      </li>
+      <li class="tl-item" data-reveal>
+        <span class="tl-date" data-i18n="e2.date">May 2024 – Oct 2025</span>
+        <div class="tl-body">
+          <h3 class="tl-role" data-i18n="e2.role">ICT Instructor &amp; Technical Mentor</h3>
+          <p class="tl-org">SENAI</p>
+          <ul>
+            <li data-i18n="e2.b1">Taught systems development, programming logic, databases, software testing and web design.</li>
+            <li data-i18n="e2.b2">Mentored beginners in problem-solving and teamwork.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+    <aside class="courses" aria-labelledby="coursesH" data-reveal>
+      <h3 id="coursesH" data-i18n="cr.h">Courses &amp; certifications</h3>
+      <div class="c-block">
+        <h4 data-i18n="cr.sec">Cybersecurity</h4>
+        <p class="via">Cisco Networking Academy · Tempest Academy · TryHackMe</p>
+        <ul>
+          <li>Cybersecurity Essentials</li>
+          <li>Cyber Threat Intelligence</li>
+          <li>NDG Linux Unhatched</li>
+          <li>Introduction to IoT</li>
+        </ul>
+      </div>
+      <div class="c-block">
+        <h4 data-i18n="cr.dev">Development &amp; cloud</h4>
+        <ul>
+          <li data-i18n="cr.aws">AWS mini-courses</li>
+          <li>Microsoft Learn</li>
+        </ul>
+      </div>
+      <div class="c-block">
+        <h4 data-i18n="cr.senai">SENAI qualifications</h4>
+        <ul>
+          <li>Design Thinking</li>
+          <li data-i18n="cr.q2">Project Management Tools</li>
+          <li data-i18n="cr.q3">Leading Teams</li>
+          <li data-i18n="cr.q4">Professional Communication</li>
+        </ul>
+      </div>
+    </aside>
+    </div>
+  </section>
+
+  <!-- TOOLBOX -->
+  <section class="toolbox" aria-labelledby="toolK">
+    <div class="sec-head" style="margin-bottom:clamp(1.5rem,3vw,2.5rem)">
+      <p class="eyebrow" id="toolK"><span class="idx">05</span><span>—</span><span data-i18n="tool.k">Toolbox</span></p>
+    </div>
+    <div class="mq-host" id="mqHost"></div>
+    <div class="tool-cols">
+      <div class="tool-col" data-reveal>
+        <h3 data-i18n="tool.tech">Tech</h3>
+        <ul>
+          <li><span data-i18n="tg.lang">Languages</span><span>JavaScript · Python · SQL</span></li>
+          <li><span data-i18n="tg.back">Backend &amp; data</span><span>Node.js · Supabase</span></li>
+          <li><span>Frontend</span><span>React</span></li>
+          <li><span>Infra</span><span>Docker · Git · Linux</span></li>
+          <li><span data-i18n="tg.aiapi">AI APIs</span><span>OpenAI · Gemini</span></li>
+          <li><span data-i18n="tg.aitools">AI tools</span><span>ChatGPT · Claude · Copilot · DeepSeek · Readdy</span></li>
+          <li><span data-i18n="tg.domain">Domain</span><span data-i18n="tg.domainV">CRM · Cybersecurity</span></li>
+        </ul>
+      </div>
+      <div class="tool-col lead" data-reveal>
+        <h3 data-i18n="tool.lead">Leadership</h3>
+        <ul>
+          <li data-i18n="ld1">Scrum &amp; Kanban</li>
+          <li data-i18n="ld2">Backlog management</li>
+          <li data-i18n="ld3">Requirements gathering</li>
+          <li data-i18n="ld4">Project scoping and budgeting</li>
+          <li data-i18n="ld5">Stakeholder management</li>
+          <li data-i18n="ld6">Team leadership</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEYOND CODE -->
+  <section id="beyond" style="padding-top:0">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="idx">06</span><span>—</span><span data-i18n="by.k">Beyond code</span></p>
+      <h2 class="headline" data-lines data-i18n="by.h">Off the keyboard</h2>
+    </div>
+    <div class="beyond-grid">
+      <article class="card has-photo" data-reveal>
+        <span class="note" aria-hidden="true"><span data-i18n="by1.n">on stage, talking security</span><svg viewBox="0 0 30 28"><path d="M4 4 C 10 14, 18 20, 26 22"/><path d="M18 24 L26 22 L22 14"/></svg></span>
+        <button type="button" class="card-media" data-gallery="talk">
+          <span class="slide on"><img class="duo" src="assets/photos/talk-1-duo.jpg" alt="" loading="lazy"><img class="col" src="assets/photos/talk-1-color.jpg" alt="" loading="lazy"></span><span class="slide"><img class="duo" src="assets/photos/talk-3-duo.jpg" alt="" loading="lazy"><img class="col" src="assets/photos/talk-3-color.jpg" alt="" loading="lazy"></span><span class="slide"><img class="duo" src="assets/photos/talk-2-duo.jpg" alt="" loading="lazy"><img class="col" src="assets/photos/talk-2-color.jpg" alt="" loading="lazy"></span>
+          <span class="media-tag"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="3.5" width="10" height="9" rx="1"/><path d="M4.5 1.5h10v9"/></svg><span data-i18n="ph.3">3 photos</span></span>
+          <span class="media-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+        <span class="card-big" aria-hidden="true">MIC</span>
+        <p data-i18n="by1">Invited speaker on cybersecurity at Startup Weekend (Techstars)</p>
+      </article>
+      <article class="card has-photo" data-reveal>
+        <span class="note" aria-hidden="true"><span data-i18n="by5.n">first episode</span><svg viewBox="0 0 30 28"><path d="M4 4 C 10 14, 18 20, 26 22"/><path d="M18 24 L26 22 L22 14"/></svg></span>
+        <button type="button" class="card-media" data-gallery="podcast">
+          <span class="slide on"><img class="duo" src="assets/photos/podcast-1-duo.jpg" alt="" loading="lazy"><img class="col" src="assets/photos/podcast-1-color.jpg" alt="" loading="lazy"></span>
+          <span class="media-tag"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="3.5" width="10" height="9" rx="1"/><path d="M4.5 1.5h10v9"/></svg><span data-i18n="ph.1">1 photo</span></span>
+          
+        </button>
+        <span class="card-big" aria-hidden="true">54H</span>
+        <p data-i18n="by5">After the cybersecurity talk was a success, we hosted the first 54 Horas Podcast, created to spark the security conversation ahead of the next Startup Weekend, an international event with high relevance in global entrepreneurship.</p>
+      </article>
+      <article class="card has-photo" data-reveal>
+        <span class="note" aria-hidden="true"><span data-i18n="by2.n">hosting the show</span><svg viewBox="0 0 30 28"><path d="M4 4 C 10 14, 18 20, 26 22"/><path d="M18 24 L26 22 L22 14"/></svg></span>
+        <button type="button" class="card-media" data-gallery="hackatech">
+          <span class="slide on"><img class="duo" src="assets/photos/hackatech-1-duo.jpg" alt="" loading="lazy"><img class="col" src="assets/photos/hackatech-1-color.jpg" alt="" loading="lazy"></span><span class="slide"><img class="duo" src="assets/photos/hackatech-2-duo.jpg" alt="" loading="lazy"><img class="col" src="assets/photos/hackatech-2-color.jpg" alt="" loading="lazy"></span>
+          <span class="media-tag"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="3.5" width="10" height="9" rx="1"/><path d="M4.5 1.5h10v9"/></svg><span data-i18n="ph.2">2 photos</span></span>
+          <span class="media-dots" aria-hidden="true"><i></i><i></i></span>
+        </button>
+        <span class="card-big" aria-hidden="true">MC</span>
+        <p data-i18n="by2">Master of ceremonies at the 1st Hackatech (SENAI/SC)</p>
+      </article>
+      <article class="card has-photo" data-reveal>
+        <span class="note" aria-hidden="true"><span data-i18n="by3.n">always learning</span><svg viewBox="0 0 30 28"><path d="M4 4 C 10 14, 18 20, 26 22"/><path d="M18 24 L26 22 L22 14"/></svg></span>
+        <div class="card-media plates" aria-hidden="true">
+          <span class="slide on plate"><b>Cisco</b><em>Networking Academy</em></span>
+          <span class="slide plate"><b>Tempest</b><em>Academy</em></span>
+          <span class="slide plate"><b>TryHackMe</b><em>Hands-on labs</em></span>
+          <span class="media-tag"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l5.5 2v4.2c0 3.3-2.4 5.8-5.5 6.8-3.1-1-5.5-3.5-5.5-6.8V3.5z"/></svg><span data-i18n="ph.inst">3 institutions</span></span>
+          <span class="media-dots"><i></i><i></i><i></i></span>
+        </div>
+        <span class="card-big" aria-hidden="true">SEC</span>
+        <p data-i18n="by3">Cybersecurity training: Cisco Networking Academy · Tempest Academy · TryHackMe</p>
+      </article>
+      <article class="card has-photo" data-reveal>
+        <span class="note" aria-hidden="true"><span data-i18n="by4.n">since 2019</span><svg viewBox="0 0 30 28"><path d="M4 4 C 10 14, 18 20, 26 22"/><path d="M18 24 L26 22 L22 14"/></svg></span>
+        <button type="button" class="card-media" data-gallery="volunteer">
+          <span class="slide on"><img class="duo" src="assets/photos/vol-1-duo.jpg" alt="" loading="lazy" style="object-position:50% 72%"><img class="col" src="assets/photos/vol-1-color.jpg" alt="" loading="lazy" style="object-position:50% 72%"></span><span class="slide"><img class="duo" src="assets/photos/vol-2-duo.jpg" alt="" loading="lazy" style="object-position:50% 40%"><img class="col" src="assets/photos/vol-2-color.jpg" alt="" loading="lazy" style="object-position:50% 40%"></span><span class="slide"><img class="duo" src="assets/photos/vol-3-duo.jpg" alt="" loading="lazy" style="object-position:50% 45%"><img class="col" src="assets/photos/vol-3-color.jpg" alt="" loading="lazy" style="object-position:50% 45%"></span>
+          <span class="media-tag"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="3.5" width="10" height="9" rx="1"/><path d="M4.5 1.5h10v9"/></svg><span data-i18n="ph.3">3 photos</span></span>
+          <span class="media-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+        <span class="card-big long" aria-hidden="true" data-i18n="by4.big">Volunteering</span>
+        <p data-i18n="by4">Volunteer at New Acropolis Florianópolis since 2019 (community aid and Civil Defense support)</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="edu" aria-labelledby="eduK">
+    <div class="sec-head" style="margin-bottom:1.5rem">
+      <p class="eyebrow" id="eduK"><span class="idx">+</span><span data-i18n="edu.k">Education</span></p>
+    </div>
+    <ul class="edu-list">
+      <li class="edu-item" data-reveal>
+        <span class="edu-year">2026<span class="hand" data-i18n="edu.exp">completed</span></span>
+        <p class="edu-title" data-i18n="edu1">Technologist Degree in Systems Analysis and Development</p>
+        <p class="edu-school">Uni SENAI</p>
+      </li>
+      <li class="edu-item" data-reveal>
+        <span class="edu-year">2023</span>
+        <p class="edu-title" data-i18n="edu2">Technical High School in Systems Development</p>
+        <p class="edu-school">SENAI</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <p class="eyebrow"><span class="idx">07</span><span>—</span><span data-i18n="ct.k">Contact</span></p>
+    <a class="talk" href="mailto:tiagomartinsrodriguesjoao@gmail.com"><span class="fit" id="talkFit" data-letters aria-hidden="true">Let's talk.</span><span class="sr" data-i18n="ct.big">Let's talk.</span></a>
+    <div class="contact-row" data-reveal>
+      <p class="avail" data-i18n="ct.avail">Open to remote work · EU work authorized<br>Florianópolis, Brazil</p>
+      <div class="mail-row">
+        <code id="emailText">tiagomartinsrodriguesjoao@gmail.com</code>
+        <button type="button" class="copy-btn" id="copyEmail" data-i18n="ct.copy">Copy</button>
+      </div>
+      <div class="links">
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/tiago-martins-rodrigues-joao" target="_blank" rel="noopener">LinkedIn <span class="arr" aria-hidden="true">↗</span></a>
+        <a class="btn btn-ghost" href="https://github.com/ThVbs" target="_blank" rel="noopener">GitHub <span class="arr" aria-hidden="true">↗</span></a>
+        <a class="btn btn-primary" id="cvBtn" href="assets/Curriculo_Completo.pdf" target="_blank" rel="noopener"><span data-i18n="ct.cv">Download CV</span> <span class="arr" aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span class="sig-logo" aria-hidden="true">TJ</span>
+  <span>© 2026 Tiago João</span>
+  <button type="button" class="top-btn" id="toTop"><span data-i18n="ft.top">Back to top</span> ↑</button>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbCap" hidden>
+  <div class="lb-top">
+    <span class="lb-count" id="lbCount">01 / 03</span>
+    <button type="button" class="lb-btn" id="lbClose" data-i18n-aria="lb.close" aria-label="Close gallery">✕</button>
+  </div>
+  <figure class="lb-stage">
+    <img id="lbImg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <div class="lb-nav">
+    <button type="button" class="lb-btn" id="lbPrev" data-i18n-aria="lb.prev" aria-label="Previous photo">←</button>
+    <div class="lb-thumbs" id="lbThumbs"></div>
+    <button type="button" class="lb-btn" id="lbNext" data-i18n-aria="lb.next" aria-label="Next photo">→</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+  var EMAIL = "tiagomartinsrodriguesjoao@gmail.com";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var T = {
+    en: {
+      "nav.work":"Work","nav.about":"About","nav.exp":"Experience","nav.contact":"Contact","nav.menu":"Menu","nav.close":"Close",
+      "hero.role":"Full Stack Developer &amp; Tech Lead",
+      "hero.loc":"Florianópolis, BR · Open to remote · EU work authorized",
+      "hero.photo":"Portrait photo","hero.photoSub":"Placeholder · 4:5",
+      "hero.sub":"Full stack developer &amp; tech lead. I turn client problems into <em>software that ships.</em>",
+      "btn.work":"See my work","btn.talk":"Let's talk","btn.visit":"Visit site",
+      "tlm.k":"Telemetry",
+      "s0":"projects delivered from discovery to launch",
+      "s1":"concurrent users on an education platform I led",
+      "s2":"people in the largest team I led",
+      "s3":"place at Startup Weekend São José 2024 (Techstars)",
+      "about.k":"About","about.h":"End to end.",
+      "about.p":"I co-founded a software, CRM and AI consultancy, where I led 10+ projects end to end: running discovery meetings with clients, turning requests into a backlog, leading developers with Scrum and presenting the deliveries. Before that, I taught programming, databases and web design at SENAI, which taught me to explain technical topics to anyone. Cybersecurity is my other passion: I trained with Cisco Networking Academy, Tempest Academy and TryHackMe, and gave an invited talk on it at Startup Weekend.",
+      "hero.me":"that's me","hero.alt":"Portrait of Tiago João",
+      "made.k":"What I'm made of","made.h":"What I'm made of",
+      "m1.n":"the foundation","m1.k":"Technical training","m1.h":"Built to build software",
+      "m1.a":"Technologist Degree in Systems Analysis and Development","m1.as":"Uni SENAI · completed 2026",
+      "m1.b":"Technical High School in Systems Development","m1.cs":"Day-to-day stack",
+      "m1.d":"AWS mini-courses and Microsoft Learn","m1.ds":"Cloud",
+      "m2.n":"continuous specialization","m2.k":"Off-the-charts passion","m2.h":"Cybersecurity",
+      "m2.as":"Training","m2.bs":"Courses","m2.d":"Invited talk on cybersecurity at Startup Weekend (Techstars)","m2.ds":"Speaker",
+      "m3.n":"people first","m3.k":"Vocation","m3.h":"Management and communication",
+      "m3.a":"Led teams of 3–7 people with Scrum","m3.as":"Tech lead",
+      "m3.b":"Taught programming, databases and web design at SENAI","m3.bs":"Instructor",
+      "m3.c":"Master of ceremonies at the 1st Hackatech (SENAI/SC)","m3.cs":"On stage",
+      "m3.d":"Design Thinking · Project Management Tools · Leading Teams · Professional Communication","m3.ds":"SENAI qualifications",
+      "cr.h":"Courses &amp; certifications","cr.sec":"Cybersecurity","cr.dev":"Development &amp; cloud","cr.aws":"AWS mini-courses",
+      "cr.senai":"SENAI qualifications","cr.q2":"Project Management Tools","cr.q3":"Leading Teams","cr.q4":"Professional Communication",
+      "f.base.k":"Based in","f.base":"Florianópolis, Brazil",
+      "f.work.k":"Work","f.work":"Open to remote",
+      "f.cit.k":"Citizenship","f.cit":"Brazilian &amp; Portuguese",
+      "f.eu.k":"EU","f.eu":"Authorized to work · no visa sponsorship required",
+      "f.lang.k":"Languages","f.lang":"Portuguese (native) · English (C1) · Spanish (basic)",
+      "work.k":"Selected work","work.h":"Selected work",
+      "ph":"Project image · placeholder",
+      "l.role":"My role","l.stack":"Stack","l.scope":"Scope","l.context":"Context",
+      "p1.c":"Public school network · under NDA","p1.t":"AI-powered education platform",
+      "p1.d":"Centralizes students' coursework, identifies learning gaps and generates AI summaries targeted at those gaps. Supports ~3,000 concurrent users with student, teacher, principal and admin roles.",
+      "p1.r":"Led a team of 7 (1 architect, 5 developers, 1 QA) for 5 months, from requirements to launch.",
+      "p2.c":"Live CRM platform","p2.note":"it's live!",
+      "p2.d":"Live CRM platform for WhatsApp, Meta Ads and email marketing.",
+      "p2.r":"One of my first projects as tech lead, leading 2 developers and 1 designer.",
+      "t.email":"Email marketing",
+      "p3.c":"CRM platform",
+      "p3.d":"A CRM built on top of a standard base, extended with new gateways and integrations.",
+      "p3.r":"Led the team that built it and ran the rollout with the client.",
+      "t.integrations":"Integrations","t.rollout":"Rollout",
+      "p4.c":"Sales consultancy","p4.t":"AI voice agent for lead handling",
+      "p4.d":"An agent that answers leads by voice inside the CRM and interprets incoming audio messages.",
+      "p4.r":"Built the first phase of the architecture.",
+      "t.ai":"AI","t.voice":"Voice","t.audio":"Audio messages",
+      "p5.c":"Startup Weekend 2024 · 2nd place","p5.note":"2nd place!",
+      "p5.d":"A platform that shows interns what day-to-day work in tech careers looks like and helps companies retain new hires.",
+      "p5.r":"Built at Startup Weekend São José 2024 (Techstars), where it took 2nd place.",
+      "t.interns":"Interns","t.retention":"Retention",
+      "exp.k":"Experience","exp.h":"Experience",
+      "e1.date":"Aug 2024 – Mar 2026","e1.role":"Co-Founder, Tech Lead &amp; Project Manager",
+      "e1.b1":"Led 10+ software projects and scoped budgets and architectures for 10+ more.",
+      "e1.b2":"Clients' technical point of contact.",
+      "e1.b3":"Managed teams of 3–7 with Scrum.",
+      "e2.date":"May 2024 – Oct 2025","e2.role":"ICT Instructor &amp; Technical Mentor",
+      "e2.b1":"Taught systems development, programming logic, databases, software testing and web design.",
+      "e2.b2":"Mentored beginners in problem-solving and teamwork.",
+      "tool.k":"Toolbox","tool.tech":"Tech","tool.lead":"Leadership","t.cyber":"Cybersecurity",
+      "tg.lang":"Languages","tg.back":"Backend &amp; data","tg.ai":"AI","tg.domain":"Domain","tg.domainV":"CRM · Cybersecurity",
+      "ld1":"Scrum &amp; Kanban","ld2":"Backlog management","ld3":"Requirements gathering","ld4":"Project scoping and budgeting","ld5":"Stakeholder management","ld6":"Team leadership",
+      "by.k":"Beyond code","by.h":"Off the keyboard",
+      "ph.1":"1 photo","ph.2":"2 photos","ph.3":"3 photos","ph.inst":"3 institutions","by4.big":"Volunteering","cap.vol1":"New Acropolis","cap.vol2":"Volunteering at an archery activity · New Acropolis","cap.vol3":"Archery activity","tg.aiapi":"AI APIs","tg.aitools":"AI tools","mq.tech":"Tech","mq.lead":"Leadership","lb.close":"Close gallery","lb.prev":"Previous photo","lb.next":"Next photo","lb.open":"Open photos",
+      "by5":"After the cybersecurity talk was a success, we hosted the first 54 Horas Podcast, created to spark the security conversation ahead of the next Startup Weekend, an international event with high relevance in global entrepreneurship.","by5.n":"first episode",
+      "cap.talk1":"Talking cybersecurity on the panel · Startup Weekend Cyber Security São José (Techstars)","cap.talk2":"Introduced as invited speaker","cap.talk3":"After the talk",
+      "cap.pod1":"Recording the first 54 Horas Podcast","cap.hack1":"Opening the 1st Hackatech as master of ceremonies · SENAI/SC","cap.hack2":"On stage at Hackatech 2024",
+      "by1":"Invited speaker on cybersecurity at Startup Weekend (Techstars)","by1.n":"on stage, talking security",
+      "by2":"Master of ceremonies at the 1st Hackatech (SENAI/SC)","by2.n":"hosting the show",
+      "by3":"Cybersecurity training: Cisco Networking Academy · Tempest Academy · TryHackMe","by3.n":"always learning",
+      "by4":"Volunteer at New Acropolis Florianópolis since 2019 (community aid and Civil Defense support)","by4.n":"since 2019",
+      "edu.k":"Education","edu.exp":"completed",
+      "edu1":"Technologist Degree in Systems Analysis and Development","edu2":"Technical High School in Systems Development",
+      "ct.k":"Contact","ct.big":"Let's talk.",
+      "ct.avail":"Open to remote work · EU work authorized<br>Florianópolis, Brazil",
+      "rot.aria":"Show next highlight","bg.k":"Background","bg.fluid":"Fluid","bg.particles":"Particles","bg.net":"Network","bg.code":"Code","bg.focus":"Focus",
+      "rot":["Full stack developer · Node.js, React, Supabase","Tech lead · teams of 3–7 with Scrum","10+ projects delivered from discovery to launch","~3,000 concurrent users on an AI education platform","2nd place · Startup Weekend São José 2024","Cybersecurity · Cisco · Tempest · TryHackMe","Brazilian & Portuguese citizen · EU work authorized"],
+      "ct.p":"Have a project, a team or a role in mind? Send me a message.",
+      "ct.copy":"Copy","ct.copied":"Copied","ct.cv":"Download CV",
+      "ct.cvFail":"The download isn't available here. Email me and I'll send the CV.",
+      "ct.copyFail":"Couldn't copy. The address is selected, copy it manually.",
+      "fm.name":"Name","fm.email":"Email","fm.msg":"Message","fm.send":"Prepare message",
+      "fm.ready":"Your message is ready. Open it in your email app, or copy it and send it to the address on the left.",
+      "fm.open":"Open email app","fm.copy":"Copy message","fm.copied":"Message copied",
+      "fm.eName":"Add your name.","fm.eEmail":"Add a valid email address, like name@domain.com.","fm.eMsg":"Write a short message.",
+      "fm.subject":"Portfolio contact from ",
+      "ft.top":"Back to top"
+    },
+    pt: {
+      "nav.work":"Projetos","nav.about":"Sobre","nav.exp":"Experiência","nav.contact":"Contato","nav.menu":"Menu","nav.close":"Fechar",
+      "hero.role":"Desenvolvedor Full Stack &amp; Tech Lead",
+      "hero.loc":"Florianópolis, BR · Aberto a remoto · Autorizado a trabalhar na UE",
+      "hero.photo":"Foto de retrato","hero.photoSub":"Espaço reservado · 4:5",
+      "hero.sub":"Desenvolvedor full stack e tech lead. Transformo problemas de clientes em <em>software que vai para produção.</em>",
+      "btn.work":"Ver meus projetos","btn.talk":"Vamos conversar","btn.visit":"Visitar site",
+      "tlm.k":"Telemetria",
+      "s0":"projetos entregues da descoberta ao lançamento",
+      "s1":"usuários simultâneos em uma plataforma educacional que liderei",
+      "s2":"pessoas no maior time que liderei",
+      "s3":"lugar no Startup Weekend São José 2024 (Techstars)",
+      "about.k":"Sobre","about.h":"De ponta a ponta.",
+      "about.p":"Cofundei uma consultoria de software, CRM e IA, onde liderei mais de 10 projetos de ponta a ponta: conduzindo reuniões de descoberta com clientes, transformando pedidos em backlog, liderando desenvolvedores com Scrum e apresentando as entregas. Antes disso, dei aulas de programação, banco de dados e web design no SENAI, o que me ensinou a explicar temas técnicos para qualquer pessoa. Cibersegurança é minha outra paixão: tive aproveitamento e contato com cursos da Cisco Networking Academy, da Tempest Academy e do TryHackMe, e fui palestrante convidado sobre o tema no Startup Weekend.",
+      "hero.me":"esse sou eu","hero.alt":"Retrato de Tiago João",
+      "made.k":"Do que sou feito","made.h":"Do que sou feito",
+      "m1.n":"a base de tudo","m1.k":"Formação técnica","m1.h":"Feito para construir software",
+      "m1.a":"Tecnólogo em Análise e Desenvolvimento de Sistemas","m1.as":"Uni SENAI · concluído em 2026",
+      "m1.b":"Ensino Médio Técnico em Desenvolvimento de Sistemas","m1.cs":"Stack do dia a dia",
+      "m1.d":"Minicursos AWS e Microsoft Learn","m1.ds":"Nuvem",
+      "m2.n":"especialização contínua","m2.k":"Paixão fora da curva","m2.h":"Segurança cibernética",
+      "m2.as":"Formação","m2.bs":"Cursos","m2.d":"Palestra como convidado sobre cibersegurança no Startup Weekend (Techstars)","m2.ds":"Palestrante",
+      "m3.n":"gente em primeiro lugar","m3.k":"Vocação","m3.h":"Gestão e comunicação",
+      "m3.a":"Liderei times de 3 a 7 pessoas com Scrum","m3.as":"Tech lead",
+      "m3.b":"Dei aulas de programação, banco de dados e web design no SENAI","m3.bs":"Instrutor",
+      "m3.c":"Mestre de cerimônias no 1º Hackatech (SENAI/SC)","m3.cs":"No palco",
+      "m3.d":"Design Thinking · Ferramentas de Gestão de Projetos · Liderando Equipes · Comunicação Profissional","m3.ds":"Qualificações SENAI",
+      "cr.h":"Cursos e certificações","cr.sec":"Cibersegurança","cr.dev":"Desenvolvimento e nuvem","cr.aws":"Minicursos AWS",
+      "cr.senai":"Qualificações SENAI","cr.q2":"Ferramentas de Gestão de Projetos","cr.q3":"Liderando Equipes","cr.q4":"Comunicação Profissional",
+      "f.base.k":"Base","f.base":"Florianópolis, Brasil",
+      "f.work.k":"Trabalho","f.work":"Aberto a remoto",
+      "f.cit.k":"Cidadania","f.cit":"Brasileira e portuguesa",
+      "f.eu.k":"UE","f.eu":"Autorizado a trabalhar · sem necessidade de patrocínio de visto",
+      "f.lang.k":"Idiomas","f.lang":"Português (nativo) · Inglês (C1) · Espanhol (básico)",
+      "work.k":"Projetos selecionados","work.h":"Projetos selecionados",
+      "ph":"Imagem do projeto · espaço reservado",
+      "l.role":"Meu papel","l.stack":"Stack","l.scope":"Escopo","l.context":"Contexto",
+      "p1.c":"Rede pública de ensino · sob NDA","p1.t":"Plataforma educacional com IA",
+      "p1.d":"Centraliza as atividades dos alunos, identifica lacunas de aprendizagem e gera resumos com IA direcionados a essas lacunas. Suporta ~3.000 usuários simultâneos com perfis de aluno, professor, diretor e administrador.",
+      "p1.r":"Liderei um time de 7 pessoas (1 arquiteto, 5 desenvolvedores, 1 QA) por 5 meses, dos requisitos ao lançamento.",
+      "p2.c":"Plataforma de CRM em produção","p2.note":"está no ar!",
+      "p2.d":"Plataforma de CRM em produção para WhatsApp, Meta Ads e e-mail marketing.",
+      "p2.r":"Um dos meus primeiros projetos como tech lead, liderando 2 desenvolvedores e 1 designer.",
+      "t.email":"E-mail marketing",
+      "p3.c":"Plataforma de CRM",
+      "p3.d":"Um CRM construído sobre uma base padrão, ampliado com novos gateways e integrações.",
+      "p3.r":"Liderei o time que o construiu e conduzi a implantação com o cliente.",
+      "t.integrations":"Integrações","t.rollout":"Implantação",
+      "p4.c":"Consultoria de vendas","p4.t":"Agente de voz com IA para atendimento de leads",
+      "p4.d":"Um agente que atende leads por voz dentro do CRM e interpreta as mensagens de áudio recebidas.",
+      "p4.r":"Construí a primeira fase da arquitetura.",
+      "t.ai":"IA","t.voice":"Voz","t.audio":"Mensagens de áudio",
+      "p5.c":"Startup Weekend 2024 · 2º lugar","p5.note":"2º lugar!",
+      "p5.d":"Uma plataforma que mostra a estagiários como é o dia a dia das carreiras em tecnologia e ajuda empresas a reter novos contratados.",
+      "p5.r":"Criada no Startup Weekend São José 2024 (Techstars), onde ficou em 2º lugar.",
+      "t.interns":"Estágio","t.retention":"Retenção",
+      "exp.k":"Experiência","exp.h":"Experiência",
+      "e1.date":"ago 2024 – mar 2026","e1.role":"Cofundador, Tech Lead e Gerente de Projetos",
+      "e1.b1":"Liderei mais de 10 projetos de software e defini orçamentos e arquiteturas para outros 10+.",
+      "e1.b2":"Ponto de contato técnico dos clientes.",
+      "e1.b3":"Gerenciei times de 3 a 7 pessoas com Scrum.",
+      "e2.date":"mai 2024 – out 2025","e2.role":"Instrutor de TIC e Mentor Técnico",
+      "e2.b1":"Ensinei desenvolvimento de sistemas, lógica de programação, banco de dados, testes de software e web design.",
+      "e2.b2":"Mentorei iniciantes em resolução de problemas e trabalho em equipe.",
+      "tool.k":"Ferramentas","tool.tech":"Tecnologia","tool.lead":"Liderança","t.cyber":"Cibersegurança",
+      "tg.lang":"Linguagens","tg.back":"Backend e dados","tg.ai":"IA","tg.domain":"Domínio","tg.domainV":"CRM · Cibersegurança",
+      "ld1":"Scrum e Kanban","ld2":"Gestão de backlog","ld3":"Levantamento de requisitos","ld4":"Escopo e orçamento de projetos","ld5":"Gestão de stakeholders","ld6":"Liderança de equipes",
+      "by.k":"Além do código","by.h":"Longe do teclado",
+      "ph.1":"1 foto","ph.2":"2 fotos","ph.3":"3 fotos","ph.inst":"3 instituições","by4.big":"Voluntariado","cap.vol1":"Nova Acrópole","cap.vol2":"Voluntariado em atividade de arco e flecha · Nova Acrópole","cap.vol3":"Atividade de arco e flecha","tg.aiapi":"APIs de IA","tg.aitools":"Ferramentas de IA","mq.tech":"Tecnologia","mq.lead":"Liderança","lb.close":"Fechar galeria","lb.prev":"Foto anterior","lb.next":"Próxima foto","lb.open":"Abrir fotos",
+      "by5":"Após o sucesso da palestra de cibersegurança, fomos anfitriões do primeiro 54 Horas Podcast, criado para fomentar o tema de segurança antes do próximo Startup Weekend, evento internacional de alta relevância no empreendedorismo mundial.","by5.n":"primeiro episódio",
+      "cap.talk1":"Falando de cibersegurança no painel · Startup Weekend Cyber Security São José (Techstars)","cap.talk2":"Apresentação como palestrante convidado","cap.talk3":"Depois da palestra",
+      "cap.pod1":"Gravação do primeiro 54 Horas Podcast","cap.hack1":"Abrindo o 1º Hackatech como mestre de cerimônias · SENAI/SC","cap.hack2":"No palco do Hackatech 2024",
+      "by1":"Palestrante convidado sobre cibersegurança no Startup Weekend (Techstars)","by1.n":"no palco, falando de segurança",
+      "by2":"Mestre de cerimônias no 1º Hackatech (SENAI/SC)","by2.n":"comandando o evento",
+      "by3":"Formação em cibersegurança: Cisco Networking Academy · Tempest Academy · TryHackMe","by3.n":"sempre estudando",
+      "by4":"Voluntário na Nova Acrópole Florianópolis desde 2019 (ajuda comunitária e apoio à Defesa Civil)","by4.n":"desde 2019",
+      "edu.k":"Formação","edu.exp":"concluído",
+      "edu1":"Tecnólogo em Análise e Desenvolvimento de Sistemas","edu2":"Ensino Médio Técnico em Desenvolvimento de Sistemas",
+      "ct.k":"Contato","ct.big":"Vamos conversar.",
+      "ct.avail":"Aberto a trabalho remoto · Autorizado a trabalhar na UE<br>Florianópolis, Brasil",
+      "rot.aria":"Mostrar próximo destaque","bg.k":"Fundo","bg.fluid":"Fluido","bg.particles":"Partículas","bg.net":"Rede","bg.code":"Código","bg.focus":"Foco",
+      "rot":["Desenvolvedor full stack · Node.js, React, Supabase","Tech lead · times de 3 a 7 pessoas com Scrum","10+ projetos entregues da descoberta ao lançamento","~3.000 usuários simultâneos em uma plataforma educacional com IA","2º lugar · Startup Weekend São José 2024","Cibersegurança · Cisco · Tempest · TryHackMe","Cidadão brasileiro e português · autorizado a trabalhar na UE"],
+      "ct.p":"Tem um projeto, um time ou uma vaga em mente? Me mande uma mensagem.",
+      "ct.copy":"Copiar","ct.copied":"Copiado","ct.cv":"Baixar CV",
+      "ct.cvFail":"O download não está disponível aqui. Me mande um e-mail e eu envio o CV.",
+      "ct.copyFail":"Não foi possível copiar. O endereço está selecionado, copie manualmente.",
+      "fm.name":"Nome","fm.email":"E-mail","fm.msg":"Mensagem","fm.send":"Preparar mensagem",
+      "fm.ready":"Sua mensagem está pronta. Abra no seu app de e-mail, ou copie e envie para o endereço ao lado.",
+      "fm.open":"Abrir app de e-mail","fm.copy":"Copiar mensagem","fm.copied":"Mensagem copiada",
+      "fm.eName":"Informe seu nome.","fm.eEmail":"Informe um e-mail válido, como nome@dominio.com.","fm.eMsg":"Escreva uma mensagem curta.",
+      "fm.subject":"Contato pelo portfólio de ",
+      "ft.top":"Voltar ao topo"
+    }
+  };
+
+  var lang = "en", langHooks = [];
+  function t(k){ return (T[lang] && T[lang][k] != null) ? T[lang][k] : T.en[k]; }
+
+  /* ---------- Stats ---------- */
+  var STATS = [
+    { n:10, from:0, pre:"", suf:{en:"+",pt:"+"} },
+    { n:3000, from:0, pre:"~", suf:{en:"",pt:""} },
+    { n:7, from:0, pre:"", suf:{en:"",pt:""} },
+    { n:2, from:1, pre:"", suf:{en:"nd",pt:"º"} }
+  ];
+  function statHTML(i, v){
+    var s = STATS[i];
+    var num = new Intl.NumberFormat(lang === "pt" ? "pt-BR" : "en-US").format(Math.round(v));
+    return s.pre + num + '<span class="suf">' + s.suf[lang] + "</span>";
+  }
+  var statEls = Array.prototype.slice.call(document.querySelectorAll("[data-stat]"));
+  function renderStats(){ statEls.forEach(function(el){ el.innerHTML = statHTML(+el.dataset.stat, STATS[+el.dataset.stat].n); }); }
+
+  /* ---------- Fit text to width ---------- */
+  var fits = Array.prototype.slice.call(document.querySelectorAll(".fit"));
+  function fitAll(){
+    fits.forEach(function(el){
+      var parent = el.parentElement;
+      var cs = getComputedStyle(parent);
+      var avail = parent.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+      el.style.fontSize = "100px";
+      if (el.classList.contains("stack")) {
+        var words = el.querySelectorAll(".word"), stacked = window.innerWidth < 700;
+        el.classList.toggle("stacked", stacked);
+        Array.prototype.forEach.call(words, function(wd){ wd.style.fontSize = ""; });
+        if (stacked) {
+          Array.prototype.forEach.call(words, function(wd){ var ww = wd.getBoundingClientRect().width; if (ww > 0) wd.style.fontSize = (avail / ww * .99).toFixed(4) + "em"; });
+          return;
+        }
+      }
+      var w = el.getBoundingClientRect().width;
+      if (w > 0 && avail > 0) el.style.fontSize = Math.floor(100 * avail / w * 0.995 * 100) / 100 + "px";
+    });
+  }
+
+  /* ---------- Line splitting for reveals ---------- */
+  function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+  function splitLines(el){
+    var words = el.textContent.trim().split(/\s+/);
+    el.dataset.plain = el.innerHTML;
+    el.innerHTML = words.map(function(w){ return '<span class="w">' + esc(w) + "</span>"; }).join(" ");
+    var lines = [], cur = [], top = null;
+    Array.prototype.forEach.call(el.querySelectorAll(".w"), function(w){
+      var tp = w.offsetTop;
+      if (top !== null && Math.abs(tp - top) > 4) { lines.push(cur); cur = []; }
+      top = tp; cur.push(w.textContent);
+    });
+    if (cur.length) lines.push(cur);
+    el.innerHTML = lines.map(function(l, i){ return '<span class="ln"><span class="ln-i" style="--d:' + i + '">' + l.map(esc).join(" ") + "</span></span>"; }).join("");
+    el.classList.add("split");
+    return lines.length;
+  }
+  function restore(el){
+    if (el.dataset.plain != null) { el.innerHTML = el.dataset.plain; delete el.dataset.plain; }
+    el.classList.remove("split","pre","in");
+  }
+
+  /* ---------- Reveal + counters, armed only once the visitor scrolls ---------- */
+  var armed = false, io = null, pending = [];
+  function inView(el){ var r = el.getBoundingClientRect(); return r.top < innerHeight && r.bottom > 0; }
+  function countUp(el){
+    var i = +el.dataset.stat, s = STATS[i], t0 = null, dur = 1500;
+    function step(ts){
+      if (t0 === null) t0 = ts;
+      var p = Math.min(1, (ts - t0) / dur), e = 1 - Math.pow(2, -10 * p);
+      el.innerHTML = statHTML(i, s.from + (s.n - s.from) * (p === 1 ? 1 : e));
+      if (p < 1) requestAnimationFrame(step); else el.dataset.done = "1";
+    }
+    requestAnimationFrame(step);
+  }
+  function arm(){
+    if (armed || reduce || !("IntersectionObserver" in window)) return;
+    armed = true;
+    io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        var el = en.target; io.unobserve(el);
+        if (el.hasAttribute("data-stat")) { countUp(el); return; }
+        el.classList.add("in");
+        var n = +(el.dataset.n || 1);
+        setTimeout(function(){ restore(el); }, 1100 + n * 90);
+      });
+    }, { rootMargin: "0px 0px -12% 0px", threshold: 0.05 });
+    document.querySelectorAll("[data-lines]").forEach(function(el){
+      if (inView(el)) return;
+      el.dataset.n = splitLines(el); pending.push(el); io.observe(el);
+    });
+    document.querySelectorAll("[data-reveal]").forEach(function(el){
+      if (inView(el)) return;
+      el.classList.add("pre"); pending.push(el); io.observe(el);
+    });
+    statEls.forEach(function(el){
+      if (inView(el)) return;
+      el.innerHTML = statHTML(+el.dataset.stat, STATS[+el.dataset.stat].from); pending.push(el); io.observe(el);
+    });
+  }
+  ["scroll","wheel","touchmove","keydown"].forEach(function(ev){ window.addEventListener(ev, arm, { passive:true, once:true }); });
+
+  /* ---------- Language ---------- */
+  function setLang(next){
+    lang = next === "pt" ? "pt" : "en";
+    if (io) { pending.forEach(function(el){ io.unobserve(el); }); }
+    pending.forEach(function(el){ if (!el.hasAttribute("data-stat")) restore(el); });
+    pending = [];
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      var v = t(el.dataset.i18n); if (v != null) el.innerHTML = v;
+    });
+    document.querySelectorAll("[data-i18n-alt]").forEach(function(el){ el.alt = t(el.dataset.i18nAlt); });
+    document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
+    document.querySelectorAll(".lang button").forEach(function(b){ b.setAttribute("aria-pressed", String(b.dataset.lang === lang)); });
+    document.querySelectorAll("[data-i18n-aria]").forEach(function(el){ el.setAttribute("aria-label", t(el.dataset.i18nAria)); });
+    renderStats();
+    langHooks.forEach(function(f){ f(); });
+    fitAll();
+    try { localStorage.setItem("tj-lang", lang); } catch(e){}
+  }
+  document.querySelectorAll(".lang button").forEach(function(b){ b.addEventListener("click", function(){ setLang(b.dataset.lang); }); });
+  var stored = null;
+  try { stored = localStorage.getItem("tj-lang"); } catch(e){}
+  var initial = stored || ((navigator.language || "").toLowerCase().indexOf("pt") === 0 ? "pt" : "en");
+  if (initial !== "en") setLang(initial); else document.documentElement.lang = "en";
+
+  fitAll();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitAll);
+  var rz; window.addEventListener("resize", function(){ clearTimeout(rz); rz = setTimeout(fitAll, 120); });
+
+  /* ---------- Header ---------- */
+  var header = document.getElementById("header"), lastY = window.scrollY;
+  window.addEventListener("scroll", function(){
+    var y = window.scrollY;
+    header.classList.toggle("scrolled", y > 8);
+    header.classList.toggle("away", y > lastY && y > 400);
+    lastY = y;
+  }, { passive:true });
+
+  /* ---------- Mobile menu ---------- */
+  var menu = document.getElementById("menu"), openBtn = document.getElementById("menuOpen"), closeBtn = document.getElementById("menuClose");
+  function openMenu(){ menu.hidden = false; openBtn.setAttribute("aria-expanded","true"); document.body.style.overflow = "hidden"; closeBtn.focus(); }
+  function closeMenu(){ menu.hidden = true; openBtn.setAttribute("aria-expanded","false"); document.body.style.overflow = ""; }
+  openBtn.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", function(){ closeMenu(); openBtn.focus(); });
+  menu.querySelectorAll("nav a").forEach(function(a){ a.addEventListener("click", closeMenu); });
+  document.addEventListener("keydown", function(e){ if (e.key === "Escape" && !menu.hidden) { closeMenu(); openBtn.focus(); } });
+
+  /* ---------- Toast + copy ---------- */
+  var toastEl = document.getElementById("toast"), toastT;
+  function toast(msg){ toastEl.textContent = msg; toastEl.classList.add("on"); clearTimeout(toastT); toastT = setTimeout(function(){ toastEl.classList.remove("on"); }, 2800); }
+  function selectText(el){ try { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); } catch(e){} }
+  function copy(text, okMsg, fallbackEl){
+    var done = function(){ toast(okMsg); };
+    var fail = function(){ if (fallbackEl) { selectText(fallbackEl); if (fallbackEl.select) fallbackEl.select(); } toast(t("ct.copyFail")); };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, fail);
+      else fail();
+    } catch(e){ fail(); }
+  }
+  var emailText = document.getElementById("emailText");
+  document.getElementById("copyEmail").addEventListener("click", function(){ copy(EMAIL, t("ct.copied") + ": " + EMAIL, emailText); });
+  /* CV: saved through the viewer's download prompt when available, plain link otherwise */
+  var dl = null;
+  try { if (window.claude && window.claude.use) window.claude.use("downloads").then(function(ns){ dl = ns; }, function(){}); } catch(e){}
+  var cvBtn = document.getElementById("cvBtn");
+  cvBtn.addEventListener("click", function(e){
+    if (!dl) return;
+    e.preventDefault();
+    fetch(cvBtn.getAttribute("href")).then(function(r){ if (!r.ok) throw new Error("fetch"); return r.blob(); })
+      .then(function(blob){ return dl.save({ filename: "Tiago-Joao-CV.pdf", data: blob }); })
+      .catch(function(err){ if (err && (err.code === "declined" || err.code === "rate_limited")) return; toast(t("ct.cvFail")); });
+  });
+
+  /* ---------- Shared pointer (mouse and touch) ---------- */
+  var ptr = { x: -9999, y: -9999, active: false };
+  window.addEventListener("pointermove", function(e){ ptr.x = e.clientX; ptr.y = e.clientY; ptr.active = true; }, { passive:true });
+  window.addEventListener("pointerdown", function(e){ ptr.x = e.clientX; ptr.y = e.clientY; ptr.active = true; }, { passive:true });
+  document.addEventListener("pointerleave", function(){ ptr.active = false; });
+  window.addEventListener("pointerup", function(e){ if (e.pointerType !== "mouse") setTimeout(function(){ ptr.active = false; }, 900); }, { passive:true });
+  window.addEventListener("pointercancel", function(){ ptr.active = false; }, { passive:true });
+
+  /* ---------- Living letters: they stretch, lean and light up around the pointer; a slow wave of light runs through them when nobody is touching ---------- */
+  var groups = [];
+  function collectLetters(){
+    groups = Array.prototype.map.call(document.querySelectorAll("[data-letters]"), function(el){
+      return { el: el, items: Array.prototype.map.call(el.querySelectorAll(".chi"), function(c){ return { el: c, g: 0, l: 0, k: "" }; }) };
+    });
+  }
+  function buildChars(el, text){
+    el.innerHTML = Array.prototype.map.call(text, function(c){
+      return c === " " ? '<span class="ch sp"> </span>' : '<span class="ch"><span class="chi">' + esc(c) + "</span></span>";
+    }).join("");
+  }
+  var talkFit = document.getElementById("talkFit");
+  function buildTalk(){ if (talkFit) { buildChars(talkFit, t("ct.big")); collectLetters(); fitAll(); } }
+  langHooks.push(buildTalk);
+  buildTalk();
+
+  var PAPER = [241,240,234], ACID = [200,255,0];
+  function mix(a){ return "rgb(" + Math.round(PAPER[0] + (ACID[0] - PAPER[0]) * a) + "," + Math.round(PAPER[1] + (ACID[1] - PAPER[1]) * a) + "," + Math.round(PAPER[2] + (ACID[2] - PAPER[2]) * a) + ")"; }
+  (function lettersLoop(now){
+    var t = now / 1000;
+    for (var gi = 0; gi < groups.length; gi++) {
+      var gr = groups[gi], box = gr.el.getBoundingClientRect();
+      if (box.bottom < 0 || box.top > window.innerHeight) continue;
+      var near = ptr.active && ptr.y > box.top - 160 && ptr.y < box.bottom + 160;
+      var rects = gr.items.map(function(it){ return it.el.parentNode.getBoundingClientRect(); });
+      for (var i = 0; i < gr.items.length; i++) {
+        var it = gr.items[i], r = rects[i], tg = 0, tl = 0;
+        if (near) {
+          var cx = r.left + r.width / 2, cy = r.top + r.height / 2, R = Math.max(70, r.width * 1.9);
+          var dx = cx - ptr.x, dy = cy - ptr.y, d2 = dx * dx + dy * dy * .35;
+          tg = Math.exp(-d2 / (R * R));
+          tl = Math.max(-1, Math.min(1, -dx / R)) * tg;
+        } else if (!reduce) {
+          var w = .5 + .5 * Math.sin(t * 1.9 - i * .55 - gi);
+          tg = .22 * Math.pow(w, 3);
+        }
+        it.g += (tg - it.g) * .14; it.l += (tl - it.l) * .14;
+        var key = it.g.toFixed(3) + "|" + it.l.toFixed(3);
+        if (key === it.k) continue;
+        it.k = key;
+        if (!reduce) it.el.style.transform = "scaleY(" + (1 + .14 * it.g).toFixed(4) + ") skewX(" + (it.l * -9).toFixed(2) + "deg)";
+        it.el.style.color = mix(Math.min(1, it.g * 1.35));
+      }
+    }
+    requestAnimationFrame(lettersLoop);
+  })(performance.now());
+
+  /* ---------- Highlights rotator ---------- */
+  (function(){
+    var box = document.getElementById("rotator"), txt = document.getElementById("rotText"), idx = document.getElementById("rotIdx"), bar = document.getElementById("rotBar");
+    if (!box) return;
+    var i = 0, DUR = 3600, start = performance.now(), paused = false, pausedAt = 0, scr = 0;
+    var GLYPHS = "/\\<>_-+=01#";
+    function pad(n){ return (n < 10 ? "0" : "") + n; }
+    function scramble(target){
+      cancelAnimationFrame(scr);
+      var from = txt.textContent, len = Math.max(from.length, target.length), t0 = performance.now(), D = 700;
+      function step(now){
+        var p = Math.min(1, (now - t0) / D), out = "";
+        for (var k = 0; k < len; k++) {
+          if (k / len < p) out += target[k] || "";
+          else if (k < target.length) out += target[k] === " " ? " " : GLYPHS[(Math.random() * GLYPHS.length) | 0];
+        }
+        txt.textContent = out;
+        if (p < 1) scr = requestAnimationFrame(step);
+      }
+      scr = requestAnimationFrame(step);
+    }
+    function show(n, instant){
+      var list = t("rot"); i = (n + list.length) % list.length;
+      idx.textContent = pad(i + 1) + " / " + pad(list.length);
+      if (instant || reduce) { cancelAnimationFrame(scr); txt.textContent = list[i]; } else scramble(list[i]);
+    }
+    box.addEventListener("mouseenter", function(){ paused = true; pausedAt = performance.now(); });
+    box.addEventListener("mouseleave", function(){ if (paused) { start += performance.now() - pausedAt; paused = false; } });
+    box.addEventListener("click", function(){ show(i + 1); start = performance.now(); });
+    langHooks.push(function(){ show(i, true); });
+    show(0, true);
+    (function tick(now){
+      if (!paused) {
+        var p = (now - start) / DUR;
+        if (p >= 1) { show(i + 1); start = now; p = 0; }
+        bar.style.transform = "scaleX(" + p.toFixed(3) + ")";
+      }
+      requestAnimationFrame(tick);
+    })(performance.now());
+  })();
+
+  /* ---------- Photo gallery (lightbox) ---------- */
+  (function(){
+    var G = {
+      talk: [["talk-1","cap.talk1"],["talk-3","cap.talk2"],["talk-2","cap.talk3"]],
+      podcast: [["podcast-1","cap.pod1"]],
+      hackatech: [["hackatech-1","cap.hack1"],["hackatech-2","cap.hack2"]],
+      volunteer: [["vol-1","cap.vol1"],["vol-2","cap.vol2"],["vol-3","cap.vol3"]]
+    };
+    var lb = document.getElementById("lightbox"), img = document.getElementById("lbImg"), cap = document.getElementById("lbCap"), count = document.getElementById("lbCount"), thumbs = document.getElementById("lbThumbs");
+    var prev = document.getElementById("lbPrev"), next = document.getElementById("lbNext"), closeB = document.getElementById("lbClose");
+    var list = null, idx = 0, opener = null;
+    function pad(n){ return (n < 10 ? "0" : "") + n; }
+    function render(instant){
+      var it = list[idx], src = "assets/photos/" + it[0] + ".jpg";
+      count.textContent = pad(idx + 1) + " / " + pad(list.length);
+      cap.textContent = t(it[1]);
+      img.alt = t(it[1]);
+      var multi = list.length > 1; prev.hidden = next.hidden = thumbs.hidden = !multi;
+      Array.prototype.forEach.call(thumbs.children, function(b, i){ b.setAttribute("aria-current", String(i === idx)); });
+      if (instant || reduce) { img.src = src; return; }
+      img.classList.add("fade");
+      setTimeout(function(){ img.src = src; img.onload = function(){ img.classList.remove("fade"); }; }, 180);
+    }
+    function open(name, from){
+      list = G[name]; idx = +(from.dataset.idx || 0) % list.length; opener = from;
+      thumbs.innerHTML = list.map(function(it, i){ return '<button type="button" style="background-image:url(assets/photos/' + it[0] + '.jpg)" aria-label="' + (i + 1) + '"></button>'; }).join("");
+      Array.prototype.forEach.call(thumbs.children, function(b, i){ b.addEventListener("click", function(){ idx = i; render(); }); });
+      lb.hidden = false; document.body.style.overflow = "hidden"; img.classList.remove("fade"); render(true); closeB.focus();
+    }
+    function close(){ lb.hidden = true; document.body.style.overflow = ""; if (opener) opener.focus(); }
+    function go(d){ if (!list || list.length < 2) return; idx = (idx + d + list.length) % list.length; render(); }
+    document.querySelectorAll("[data-gallery]").forEach(function(b){
+      b.addEventListener("click", function(){ open(b.dataset.gallery, b); });
+    });
+    function labelOpeners(){ document.querySelectorAll("[data-gallery]").forEach(function(b){ var card = b.closest(".card"), p = card && card.querySelector("p"); b.setAttribute("aria-label", t("lb.open") + ": " + (p ? p.textContent.split(/[.(]/)[0].trim() : "")); }); }
+    labelOpeners(); langHooks.push(function(){ labelOpeners(); if (!lb.hidden) render(true); });
+    prev.addEventListener("click", function(){ go(-1); }); next.addEventListener("click", function(){ go(1); }); closeB.addEventListener("click", close);
+    lb.addEventListener("click", function(e){ if (e.target === lb || e.target.classList.contains("lb-stage")) close(); });
+    document.addEventListener("keydown", function(e){
+      if (lb.hidden) return;
+      if (e.key === "Escape") close(); else if (e.key === "ArrowLeft") go(-1); else if (e.key === "ArrowRight") go(1);
+      else if (e.key === "Tab") { var f = Array.prototype.filter.call(lb.querySelectorAll("button"), function(x){ return !x.hidden && x.offsetParent; }); if (!f.length) return; var first = f[0], last = f[f.length - 1]; if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); } else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); } }
+    });
+    var sx = null;
+    lb.addEventListener("touchstart", function(e){ sx = e.touches[0].clientX; }, { passive:true });
+    lb.addEventListener("touchend", function(e){ if (sx === null) return; var dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1); sx = null; }, { passive:true });
+  })();
+
+  /* ---------- Cards: photos cross-fade on their own ---------- */
+  (function(){
+    var boxes = Array.prototype.slice.call(document.querySelectorAll(".card-media")).map(function(el, k){
+      var sl = el.querySelectorAll(".slide"), dots = el.querySelectorAll(".media-dots i");
+      if (dots[0]) dots[0].classList.add("on");
+      return { el: el, sl: sl, dots: dots, i: 0, hover: false, next: performance.now() + 2600 + k * 900 };
+    }).filter(function(b){ return b.sl.length > 1; });
+    if (!boxes.length) return;
+    var seen = new Set();
+    if ("IntersectionObserver" in window) {
+      var io2 = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); }); });
+      boxes.forEach(function(b){ io2.observe(b.el); });
+    } else boxes.forEach(function(b){ seen.add(b.el); });
+    boxes.forEach(function(b){
+      var card = b.el.closest(".card") || b.el;
+      card.addEventListener("mouseenter", function(){ b.hover = true; });
+      card.addEventListener("mouseleave", function(){ b.hover = false; b.next = performance.now() + 1800; });
+    });
+    function show(b, n){
+      b.sl[b.i].classList.remove("on"); if (b.dots[b.i]) b.dots[b.i].classList.remove("on");
+      b.i = n % b.sl.length;
+      b.sl[b.i].classList.add("on"); if (b.dots[b.i]) b.dots[b.i].classList.add("on");
+      b.el.dataset.idx = b.i;
+    }
+    if (reduce) return;
+    setInterval(function(){
+      var now = performance.now();
+      boxes.forEach(function(b){
+        if (b.hover || !seen.has(b.el) || document.hidden || now < b.next) return;
+        show(b, b.i + 1); b.next = now + 4200;
+      });
+    }, 250);
+  })();
+
+  /* ---------- Toolbox marquee: built from the two lists below it ---------- */
+  (function(){
+    var host = document.getElementById("mqHost");
+    if (!host) return;
+    function items(col, split){
+      var out = [];
+      document.querySelectorAll(col + " li").forEach(function(li){
+        var v = split ? li.lastElementChild.textContent : li.textContent;
+        (split ? v.split("·") : [v]).forEach(function(x){ x = x.trim(); if (x && out.indexOf(x) < 0) out.push(x); });
+      });
+      return out;
+    }
+    function group(list, hidden){
+      return '<div class="mq-group"' + (hidden ? ' aria-hidden="true"' : "") + ">" + list.map(function(w){ return '<span class="mq-word">' + esc(w) + '</span><span class="mq-sep" aria-hidden="true">·</span>'; }).join("") + "</div>";
+    }
+    function row(label, list, cls){
+      return '<div class="marquee ' + cls + '"><span class="mq-label">' + esc(label) + '</span><div class="mq-track">' + group(list) + group(list, true) + "</div></div>";
+    }
+    function build(){
+      host.innerHTML = row(t("mq.tech"), items(".tool-col:not(.lead)", true), "mq-tech") + row(t("mq.lead"), items(".tool-col.lead", false), "mq-lead");
+    }
+    build(); langHooks.push(build);
+  })();
+
+  /* ---------- Back to top ---------- */
+  document.getElementById("toTop").addEventListener("click", function(){ window.scrollTo({ top:0, behavior: reduce ? "auto" : "smooth" }); });
+
+  /* ---------- Background: a quiet dot grid with one neon spotlight ---------- */
+  function isUI(el){ return el && el.closest && el.closest("a, button, input, textarea, label, .lightbox"); }
+  var BG = {};
+  /* ---------- Focus: a quiet dot grid with one neon spotlight that follows the pointer (Canvas 2D) ---------- */
+  BG.focus = function(host){
+    var cv = document.createElement("canvas"); host.appendChild(cv);
+    var ctx = cv.getContext("2d");
+    var W, H, GAP, raf = 0, alive = true, t0 = performance.now() / 1000;
+    function size(){
+      var dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = window.innerWidth; H = window.innerHeight; GAP = W < 760 ? 24 : 30;
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      if (reduce) draw(0, false);
+    }
+    var sx = 0, sy = 0, started = false, ripples = [];
+    function onDown(e){ if (!isUI(e.target)) ripples.push({ x: e.clientX, y: e.clientY, t0: performance.now() / 1000 - t0 }); }
+    function draw(t, animate){
+      /* spotlight target: the pointer, or a slow drift when nobody is interacting */
+      var ix = W * (.62 + Math.sin(t * .23) * .22), iy = H * (.42 + Math.cos(t * .17) * .2);
+      var tx = ptr.active ? ptr.x : ix, ty = ptr.active ? ptr.y : iy;
+      if (!started) { sx = tx; sy = ty; started = true; }
+      var k = animate ? (ptr.active ? .12 : .03) : 1; sx += (tx - sx) * k; sy += (ty - sy) * k;
+      ripples = ripples.filter(function(r){ return t - r.t0 < 1.6; });
+
+      ctx.clearRect(0, 0, W, H);
+      var R = Math.min(W, H) * (W < 760 ? .42 : .36);
+      var g = ctx.createRadialGradient(sx, sy, 0, sx, sy, R * 1.6);
+      g.addColorStop(0, "rgba(200,255,0,.13)"); g.addColorStop(.45, "rgba(200,255,0,.04)"); g.addColorStop(1, "rgba(200,255,0,0)");
+      ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+
+      var off = (window.scrollY * .12) % GAP, R2 = R * R * .45, quiet = new Path2D(), lit = [];
+      for (var y = -GAP + (GAP - off); y < H + GAP; y += GAP) {
+        for (var x = GAP / 2; x < W; x += GAP) {
+          var dx = x - sx, dy = y - sy, d2 = dx * dx + dy * dy, f = Math.exp(-d2 / R2);
+          for (var q = 0; q < ripples.length; q++) {
+            var rp = ripples[q], age = t - rp.t0, dd = Math.sqrt((x - rp.x) * (x - rp.x) + (y - rp.y) * (y - rp.y)) - age * 700;
+            f = Math.max(f, Math.exp(-dd * dd / 800) * (1 - age / 1.6));
+          }
+          if (f < .04) { quiet.rect(x - .75, y - .75, 1.5, 1.5); continue; }
+          var d = Math.sqrt(d2) || 1, push = f * 9;
+          lit.push(x + dx / d * push, y + dy / d * push, f);
+        }
+      }
+      ctx.fillStyle = "rgba(241,240,234,.13)"; ctx.fill(quiet);
+      ctx.fillStyle = "#C8FF00";
+      for (var i = 0; i < lit.length; i += 3) {
+        var ff = lit[i + 2];
+        ctx.globalAlpha = .18 + ff * .82;
+        ctx.beginPath(); ctx.arc(lit[i], lit[i + 1], .8 + ff * 2.1, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    }
+    size();
+    window.addEventListener("resize", size);
+    window.addEventListener("pointerdown", onDown, { passive:true });
+    if (!reduce) (function loop(now){ if (!alive) return; draw(now / 1000 - t0, true); raf = requestAnimationFrame(loop); })(performance.now());
+    return function(){ alive = false; cancelAnimationFrame(raf); window.removeEventListener("resize", size); window.removeEventListener("pointerdown", onDown); cv.remove(); };
+  };
+
+  BG.focus(document.getElementById("bgHost"));
+
+  /* ---------- Scroll progress and hero parallax (independent of the background) ---------- */
+  (function(){
+    var prog = document.getElementById("progress"), heroTitle = document.querySelector(".hero-title"), H = window.innerHeight;
+    window.addEventListener("resize", function(){ H = window.innerHeight; });
+    function update(){
+      var y = window.scrollY, max = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+      if (prog) prog.style.transform = "scaleX(" + Math.min(1, y / max).toFixed(4) + ")";
+      if (!reduce && heroTitle && y < H * 1.3) {
+        heroTitle.style.transform = "translate3d(0," + (y * .3).toFixed(1) + "px,0)";
+        heroTitle.style.opacity = String(Math.max(.1, 1 - y / (H * 1.05)));
+      }
+    }
+    window.addEventListener("scroll", update, { passive:true }); update();
+  })();
+
+  /* ---------- Custom cursor (desktop, motion allowed) ---------- */
+  if (!reduce && window.matchMedia("(pointer: fine)").matches) {
+    document.documentElement.classList.add("has-cursor");
+    var dot = document.querySelector(".c-dot"), ring = document.querySelector(".c-ring");
+    var mx = -100, my = -100, rx = -100, ry = -100;
+    window.addEventListener("mousemove", function(e){ mx = e.clientX; my = e.clientY; dot.style.transform = "translate(" + mx + "px," + my + "px)"; }, { passive:true });
+    document.addEventListener("mouseleave", function(){ dot.classList.add("hide"); ring.classList.add("hide"); });
+    document.addEventListener("mouseenter", function(){ dot.classList.remove("hide"); ring.classList.remove("hide"); });
+    document.addEventListener("mouseover", function(e){
+      var hot = e.target.closest && e.target.closest("a, button, .project, .card, .made, .mq-word");
+      ring.classList.toggle("big", !!hot);
+    });
+    (function loop(){
+      rx += (mx - rx) * 0.2; ry += (my - ry) * 0.2;
+      ring.style.transform = "translate(" + rx + "px," + ry + "px)";
+      requestAnimationFrame(loop);
+    })();
+  }
+})();
+</script>
+
+</body></html>
